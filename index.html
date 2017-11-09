@@ -1,16 +1,46 @@
 <!Doctype HTML>
+<html class="uk-background-muted">
 
 <head>
   <title>Web projects by Benjamin Cooley</title>
+<link rel="stylesheet" href="uikit-3.0.0-beta.34/css/uikit.css" />
+<link rel="stylesheet" href="style.css" />
+
+  <script src="uikit-3.0.0-beta.34/js/uikit.min.js"></script>
+  <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
 </head>
-<body>
-<div style="margin:auto; text-align: center; top-margin: 300px">
-<h3>Welcome to my Github page. Projects coming...NOW</h3>
+<body >
+
+<div class="uk-animation-fade uk-height-viewport" style="margin:auto; text-align: center; top-margin: 300px">
+
+<h1 class="uk-heading-hero">Welcome to my Github page. Projects coming...later</h1>
+<a href="#section" class="uk-icon-button uk-scroll" uk-icon="icon: chevron-down" style="width:100px; height:100px"></a>
 <p>
   In the meantime, have a look around my <a href="http://benjamincooley.me">portfolio site.</a>
 </p>
+</div>
+
+<div class="uk-height-viewport" id="section">
+
+
 <p>
   Or checkout this <a href="/about.html">about</a> page.
 </p>
+<p>
+  more text
+</p>
 </div>
+
+<script>
+UIkit.scroll('.uk-scroll', {
+  duration: 1500
+});
+
+UIkit.icon('.uk-icon-link', {
+    ratio: 2
+}
+);
+</script>
+
 </body>
+</html>

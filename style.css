@@ -1,0 +1,13 @@
+.uk-animation-fade {
+    -webkit-animation-duration: 2.4s;
+    animation-duration: 2.4s;
+}
+
+.uk-scroll {
+  animation-duration: 2.4s;
+}
+
+.uk-heading-hero {
+  margin-top: 200px;
+  font-size: 5em;
+}
