@@ -11,30 +11,34 @@
 </head>
 <body >
 
-<div class="uk-animation-fade uk-height-viewport" style="margin:auto; text-align: center; top-margin: 300px">
+<div class="uk-animation-fade uk-height-viewport center-div">
 
 <h1 class="uk-heading-hero">Welcome to my Github page. Projects coming...later</h1>
-<a href="#section" class="uk-icon-button uk-scroll" uk-icon="icon: chevron-down" style="width:100px; height:100px"></a>
-<p>
-  In the meantime, have a look around my <a href="http://benjamincooley.me">portfolio site.</a>
-</p>
+<a href="#section-1" class="uk-icon-button uk-scroll" uk-icon="icon: chevron-down" style="width:100px; height:100px"></a>
+
 </div>
 
-<div class="uk-height-viewport" id="section">
+<div class="uk-height-viewport uk-background-muted center-div" id="section-1" style="margin-top: 500px">
 
+  <h4>
+    In the meantime, have a look around my old <a href="http://benjamincooley.me">portfolio site</a>.
+  </h4>
+<h4>
+  Or read more about me at this <a href="about.html">about</a> page.
+</h4>
+<h4>
+  Slowly adding my <a href="projects.html">projects</a>
+</h4>
 
-<p>
-  Or checkout this <a href="/about.html">about</a> page.
-</p>
-<p>
-  more text
-</p>
 </div>
 
 <script>
 UIkit.scroll('.uk-scroll', {
-  duration: 1500
-});
+  duration: 1500,
+  offset: 300
+}
+
+);
 
 UIkit.icon('.uk-icon-link', {
     ratio: 2

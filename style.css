@@ -8,6 +8,16 @@
 }
 
 .uk-heading-hero {
-  margin-top: 200px;
-  font-size: 5em;
+  margin-top: 15%;
+  font-size: 4em;
+}
+
+.center-div {
+  margin:auto;
+  text-align: center;
+}
+
+.projects-container {
+  max-width: 900px;
+  margin: auto;
 }
