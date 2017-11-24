@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="uikit-3.0.0-beta.34/css/uikit.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/flx2nba.css">
 
     <script src="uikit-3.0.0-beta.34/js/uikit.min.js"></script>
     <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-    <div class="content">
+    <div class="content projects-header">
 
         <!-- navbar -->
         <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 400">
@@ -29,7 +30,7 @@
                     <div class="uk-offcanvas-bar">
 
                         <ul class="uk-nav uk-nav-default">
-                            <li class="uk-active"><a href="#">MENU</a></li>
+                            <li class="uk-active"><a href="index.html">HOME</a></li>
                             <li><a href="about.html">ABOUT</a></li>
                             <li><a href="projects.html">PROJECTS</a></li>
                             <li><a href="#">CONTACT</a></li>
@@ -41,22 +42,49 @@
                 </div>
             </nav>
         </div>
-        <div class="center-div" style="margin-top:100px; max-width:600px">
+        <div class="uk-text-center uk-heading-hero uk-grid-large projects-header-container " uk-grid style="">
 
 
-            <h1>Projects</h1>
-            <a href="index.html" class="uk-icon-button uk-scroll" uk-icon="icon: chevron-left" style="width:100px; height:100px"></a>
+          <div class="uk-width-1-2@m uk-animation-fade" style="">
+              <div class="" style="font-color: black; margin-top: 20%; font-family: 'Proxima Nova'; opacity: 1.0">
+                <h1 style=>Projects</h1>
+
+              </div>
+
+              <a href="#section-2" class="uk-icon-button uk-scroll" uk-icon="icon: chevron-down" style="width:100px; height:100px"></a>
+          </div>
+
+            <div class="uk-width-1-2@m">
+                <div class="" style="font-color: black; margin-top: 20%; padding-left: 100px">
+
+                </div>
+
+            </div>
+
+
 
         </div>
+        <div class="center-div social-icon-box" style="">
+          <img class="icons-in-box"  src="images/icons/twitter.svg" />
+          <img class="icons-in-box"  src="images/icons/medium.svg" />
+          <img  class="icons-in-box"  src="images/icons/github.svg" />
+        </div>
 
-        <div class="projects-container">
+
+        <div class="projects-container" >
 
 
-            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+            <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                      <h3>Gephi</h3>
-                      </div>
+                        <h3>Gephi</h3>
+                        <div class="center-div icon-box">
+                          <img class="icons-in-box"  src="images/icons/bar-chart.svg" />
+                          <img class="icons-in-box"  src="images/icons/laptop.svg" />
+                          <img  class="icons-in-box"  src="images/icons/table.svg" />
+
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <div>
@@ -67,25 +95,25 @@
                 </div>
             </div>
 
-            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+            <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                    <h3>Trump cabinet</h3>
+                    <div class="uk-card uk-card-default uk-card-body" >
+                        <h3>Trump cabinet</h3>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <div class="uk-card uk-card-default uk-card-body" style="margin: 0px; padding: 0px;">
+                        <div class="uk-card uk-card-default uk-card-body card-padding" style="margin: 0px; padding: 0px;">
                             <img src="images/trump-cab.png" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+            <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                    <h3>Hyperpartisan</h3>
+                        <h3 id="section-2">Hyperpartisan</h3>
                     </div>
                 </div>
                 <div>
@@ -96,8 +124,29 @@
                     </div>
                 </div>
             </div>
+            <div class="center-div" style="margin-top:100px; max-width:600px" >
+                <a href="index.html" class="uk-icon-button" uk-icon="icon: chevron-left" style="width:100px; height:100px"></a>
+            </div>
+        </div>
+        <div class="footer center-div">
+          <p style="color: white">Coded with ♡ by Ben</p>
+          <p style="color: white">Graphics and icons by Maggie</p>
         </div>
     </div>
+
 </body>
+
+<script>
+    UIkit.scroll('.uk-scroll', {
+            duration: 1000,
+            offset: 100,
+        }
+
+    );
+
+    UIkit.icon('.uk-icon-link', {
+        ratio: 2
+    });
+</script>
 
 </html>

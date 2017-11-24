@@ -1,3 +1,27 @@
+@media (max-width: 600px) {
+
+    h1 {
+        background-color: #F8F8F8;
+        font-size: 0.5em;
+    }
+
+} /* end break point */
+
+h1 {
+  font-family: "Proxima Nova";
+  font-size: 1em;
+}
+
+h3 {
+  font-family: "Proxima Nova";
+  font-size: 1.8em;
+}
+
+p {
+  font-family: "mr-eaves-sans";
+  font-size: 18px;
+}
+
 .uk-animation-fade {
     -webkit-animation-duration: 2.4s;
     animation-duration: 2.4s;
@@ -9,6 +33,7 @@
 
 .uk-heading-hero {
   font-size: 4em;
+  color: black;
 }
 
 .uk-icon-button {
@@ -21,19 +46,21 @@
 }
 
 .skills-container {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   margin-bottom: 100px;
 }
 
 .projects-container {
-  max-width: 900px;
+  max-width: 950px;
+  opacity: 1.0;
   margin: auto;
 }
 
 .content {
             overflow-x: hidden;
-            margin-bottom: -10px;
+            padding-bottom: -10px;
+            height:100%;
 }
 
 .uk-navbar-transparent {
@@ -41,6 +68,94 @@
 }
 
 .landing-header {
-   background-image: url("images/header-spiral.svg");
+   background-image: url("images/spiral-60.svg");
    background-repeat: no-repeat;
+   background-position: 10%0%;
+}
+
+.projects-header {
+   background-image: url("images/spiral1.svg");
+   background-repeat: no-repeat;
+   height: 800px;
+   background-position: 90%5%;
+}
+
+.about-header {
+   background-image: url("images/spiral2.svg");
+   background-repeat: no-repeat;
+   height: 800px;
+   background-position: 90%5%;
+}
+
+.card-padding {
+  padding: 20px;
+}
+
+.uk-button-primary {
+  background-color: gray;
+  width: 200px;
+  height: 70px;
+  margin: auto;
+}
+
+a.uk-button-primary {
+font-size: 16px;
+font-family: "Proxima Nova";
+margin: auto;
+padding-top: 15px;
+text-align: center;
+}
+
+.uk-button-primary:hover {
+background-color: #333333;
+margin: auto;
+padding-top: 15px;
+text-align: center;
+}
+
+.footer {
+   width: 100%;
+   right: 0;
+bottom: 0;
+left: 0;
+padding: 1rem;
+   height: 80px;   /* Height of the footer */
+   background-color: black;
+}
+
+.projects-header-container {
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+
+.social-icon-box {
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 0px;
+  position: relative;
+  height: auto;
+  max-width: 200px;
+  overflow-y: hidden;
+  overflow-x:auto;
+  background-color: #F8F8F8;
+}
+
+.icon-box {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  height: auto;
+  max-width: 400px;
+  overflow-y: hidden;
+  overflow-x:auto;
+}
+
+.icons-in-box {
+  display: inline;
+margin: 0px;
+padding: 0px;
+width: 50px;
 }
