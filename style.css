@@ -67,7 +67,7 @@ body {
 }
 
 .projects-container {
-  max-width: 1000px;
+  max-width: 1100px;
   opacity: 1.0;
   margin: auto;
 }
@@ -176,7 +176,7 @@ text-align: center;
   display: inline-block;
 margin: 0px;
 padding: 0px;
-width: 50px;
+width: 60px;
 }
 
 .skill-icon {
