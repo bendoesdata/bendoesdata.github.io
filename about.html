@@ -20,7 +20,7 @@
 
   <!-- navbar -->
   <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 400">
-      <nav class="uk-navbar-container uk-navbar-transparent" style="background-color: rgba(255,255,255,0); height: 20px">
+      <nav data-uk-sticky class="uk-navbar-container uk-navbar-transparent" style="background-color: rgba(255,255,255,0); height: 20px">
           <div class="uk-navbar-left">
               <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#offcanvas-slide"></a>
           </div>
@@ -28,11 +28,10 @@
           <div id="offcanvas-slide" uk-offcanvas>
               <div class="uk-offcanvas-bar">
 
-                  <ul class="uk-nav uk-nav-default">
+                  <ul class="uk-nav uk-nav-default" style="font-family: mr-eaves-sans; font-size: 20px">
                       <li class="uk-active"><a href="index.html">HOME</a></li>
-                      <li><a href="about.html">ABOUT</a></li>
                       <li><a href="projects.html">PROJECTS</a></li>
-                      <li><a href="#">CONTACT</a></li>
+                      <li><a href="about.html">ABOUT</a></li>
                       <li class="uk-nav-divider"></li>
 
                   </ul>
@@ -77,8 +76,15 @@
 
       <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
           <div>
-              <div class="uk-card uk-card-default uk-card-body">
-                  <h3>Gephi</h3>
+              <div class="uk-card uk-card-default uk-card-body center-div" style="max-width: 600px">
+                  <h3>Welcome</h3>
+                  <p>Ben Cooley is a data journalist telling visually engaging stories with data. He holds an MSc in Digital Journalism with distinction from Goldsmiths, University of London. </p>
+
+                    <p>Previously published in print and online outlets, he now spends time hacking at code to create data-driven content and visualizations.</p>
+
+
+
+
                   <div class="center-div icon-box">
                     <img class="icons-in-box"  src="images/icons/bar-chart.svg" />
                     <img class="icons-in-box"  src="images/icons/laptop.svg" />
@@ -87,45 +93,11 @@
                   </div>
               </div>
           </div>
-          <div>
-              <div>
-                  <div class="uk-card uk-card-default uk-card-body" style="margin: 0px; padding: 0px;">
-                      <img src="images/gephi-graphic.png" />
-                  </div>
-              </div>
-          </div>
+
       </div>
 
-      <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
-          <div>
-              <div class="uk-card uk-card-default uk-card-body" >
-                  <h3>Trump cabinet</h3>
-              </div>
-          </div>
-          <div>
-              <div>
-                  <div class="uk-card uk-card-default uk-card-body card-padding" style="margin: 0px; padding: 0px;">
-                      <img src="images/trump-cab.png" />
-                  </div>
-              </div>
-          </div>
-      </div>
 
-      <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
-          <div>
-              <div class="uk-card uk-card-default uk-card-body">
-                  <h3>Hyperpartisan</h3>
-              </div>
-          </div>
-          <div>
-              <div>
-                  <div class="uk-card uk-card-default uk-card-body" style="margin: 0px; padding: 0px;">
-                      <img src="images/hyperpartisan.png" />
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="center-div" style="margin-top:100px; max-width:600px" >
+      <div class="center-div" style="margin-top:50px; margin-bottom: 50px; max-width:600px" >
           <a href="index.html" class="uk-icon-button" uk-icon="icon: chevron-left" style="width:100px; height:100px"></a>
       </div>
   </div>

@@ -21,7 +21,7 @@
 
         <!-- navbar -->
         <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 400">
-            <nav class="uk-navbar-container uk-navbar-transparent" style="background-color: rgba(255,255,255,0); height: 20px">
+            <nav data-uk-sticky class="uk-navbar-container uk-navbar-transparent" style="background-color: rgba(255,255,255,0); height: 20px">
                 <div class="uk-navbar-left">
                     <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#offcanvas-slide"></a>
                 </div>
@@ -29,11 +29,10 @@
                 <div id="offcanvas-slide" uk-offcanvas>
                     <div class="uk-offcanvas-bar">
 
-                        <ul class="uk-nav uk-nav-default">
+                        <ul class="uk-nav uk-nav-default" style="font-family: mr-eaves-sans; font-size: 20px">
                             <li class="uk-active"><a href="index.html">HOME</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
                             <li><a href="projects.html">PROJECTS</a></li>
-                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
                             <li class="uk-nav-divider"></li>
 
                         </ul>
@@ -76,20 +75,51 @@
 
             <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <h3>Gephi</h3>
+                    <div class="uk-card uk-card-default uk-card-body" >
+                        <h4 style="">Westminster network analysis</h4>
+                        <p style="text-align: left">
+                          Network analysis and data viz of tweets immediately after news broke of the Westminster attack.
+                        </p>
                         <div class="center-div icon-box">
-                          <img class="icons-in-box"  src="images/icons/bar-chart.svg" />
-                          <img class="icons-in-box"  src="images/icons/laptop.svg" />
-                          <img  class="icons-in-box"  src="images/icons/table.svg" />
-
+                          <div class="icons-in-box">
+                            <img src="images/icons/terminal.svg" />
+                            <p class="skill-icon">
+                            Code
+                            </p>
+                          </div>
+                          <div class="icons-in-box">
+                            <img src="images/icons/bar-chart.svg" />
+                            <p class="skill-icon">
+                            Viz
+                            </p>
+                          </div>
+                          <div class="icons-in-box">
+                            <img src="images/icons/laptop.svg" />
+                            <p class="skill-icon">
+                            Writing
+                            </p>
+                          </div>
+                          <div class="icons-in-box">
+                            <img  class="icons-in-box"  src="images/icons/table.svg" />
+                            <p class="skill-icon">
+                            Data
+                            </p>
+                          </div>
                         </div>
+
                     </div>
                 </div>
                 <div>
                     <div>
                         <div class="uk-card uk-card-default uk-card-body" style="margin: 0px; padding: 0px;">
-                            <img src="images/gephi-graphic.png" />
+
+                            <div class="uk-inline-clip uk-transition-toggle">
+              <img style="width: 100%" src="images/gephi-graphic.png" />
+            <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
+                <a class="uk-h4 uk-margin-remove" href="https://medium.com/@bnj_cooley/how-twitter-responded-an-hour-after-the-westminster-attacks-bd2823a31195">VIEW</a>
+            </div>
+        </div>
+
                         </div>
                     </div>
                 </div>
@@ -98,7 +128,42 @@
             <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body" >
-                        <h3>Trump cabinet</h3>
+                        <h4>Trump cabinet conflicts</h4>
+                        <p style="text-align: left">
+                          Interactive data viz story on the conflicts of interest in Trump’s cabinet.
+                        </p>
+                        <div class="center-div icon-box">
+                          <div class="icons-in-box">
+                            <img src="images/icons/glasses.svg" />
+                            <p class="skill-icon">
+                            Research
+                            </p>
+                          </div>
+                          <div class="icons-in-box">
+                            <img src="images/icons/bar-chart.svg" />
+                            <p class="skill-icon">
+                            Viz
+                            </p>
+                          </div>
+                          <div class="icons-in-box">
+                            <img src="images/icons/laptop.svg" />
+                            <p class="skill-icon">
+                            Writing
+                            </p>
+                          </div>
+                          <div class="icons-in-box">
+                            <img  class="icons-in-box"  src="images/icons/table.svg" />
+                            <p class="skill-icon">
+                            Data
+                            </p>
+                          </div>
+                          <div class="icons-in-box">
+                            <img  class="icons-in-box"  src="images/icons/terminal.svg" />
+                            <p class="skill-icon">
+                            Code
+                            </p>
+                          </div>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -113,7 +178,10 @@
             <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                        <h3 id="section-2">Hyperpartisan</h3>
+                        <h4 id="section-2">Hyperpartisan publishers</h4>
+                        <p style="text-align: left">
+                          Twitter analysis and data vis story written for the Goldsmiths MADJ program.
+                        </p>
                     </div>
                 </div>
                 <div>
@@ -124,13 +192,13 @@
                     </div>
                 </div>
             </div>
-            <div class="center-div" style="margin-top:100px; max-width:600px" >
+            <div class="center-div" style="margin-top:20px; margin-bottom: 50px; max-width:600px" >
                 <a href="index.html" class="uk-icon-button" uk-icon="icon: chevron-left" style="width:100px; height:100px"></a>
             </div>
         </div>
         <div class="footer center-div">
-          <p style="color: white">Coded with ♡ by Ben</p>
-          <p style="color: white">Graphics and icons by Maggie</p>
+          <p style="color: white">Made with ♡</p>
+          <p style="color: white">Code by Ben.<br />Graphics and icons by Maggie</p>
         </div>
     </div>
 
