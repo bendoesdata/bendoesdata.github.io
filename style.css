@@ -4,11 +4,33 @@
         background-color: #F8F8F8;
     }
 
-} /* end break point */
+    .icons-in-box {
+      display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+    }
 
-@media only screen and (max-width: 480px) {
-	h1 { font-size: 50%; // 16px }
-}
+    .view-projects-button {
+      margin: auto;
+      margin-bottom: 250px;
+      margin-top: -50px
+    }
+
+    .footer {
+       width: 100%;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       padding: 1rem;
+       height: 110px;   /* Height of the footer */
+       background-color: black;
+       position:absolute;
+       bottom: 0;
+       font-size: 0.8em;
+    }
+
+} /* end break point */
 
 h1 {
   font-family: "Proxima Nova";
@@ -61,7 +83,7 @@ body {
 }
 
 .skills-container {
-  max-width: 950px;
+  max-width: 1000px;
   margin: auto;
   margin-bottom: 100px;
 }
@@ -103,7 +125,7 @@ body {
 }
 
 .card-padding {
-  padding: 20px;
+  padding: 10px;
 }
 
 .uk-button-primary {
@@ -176,11 +198,17 @@ text-align: center;
   display: inline-block;
 margin: 0px;
 padding: 0px;
-width: 60px;
+width: 50px;
 }
 
 .skill-icon {
   font-size: 0.9em;
   margin-top: -3px;
   margin-bottom: -3px
+}
+
+.view-projects-button {
+  margin: auto;
+  margin-bottom: 250px;
+  margin-top: -100px
 }
