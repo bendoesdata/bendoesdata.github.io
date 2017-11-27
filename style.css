@@ -49,7 +49,7 @@ h4 {
 }
 
 p {
-  font-family: "mr-eaves-sans";
+  font-family: "mr-eaves-sans", sans-serif;
   font-size: 1.4em;
   color: #333333;
   font-weight: lighter;
