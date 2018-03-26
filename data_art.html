@@ -1,0 +1,131 @@
+<!Doctype HTML>
+
+<html class="uk-background-muted">
+
+<head>
+    <title>Data Art</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="uikit-3.0.0-beta.34/css/uikit.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="uikit-3.0.0-beta.34/js/uikit.min.js"></script>
+    <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/flx2nba.css">
+
+</head>
+
+<body>
+    <div class="about-header">
+
+        <!-- navbar -->
+        <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 400">
+            <nav data-uk-sticky class="uk-navbar-container uk-navbar-transparent uk-navbar-right" style="background-color: rgba(255,255,255,0); height: 20px">
+                <div class="uk-navbar-right" style="padding-top: 30px; padding-right: 10px">
+                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#offcanvas-slide"></a>
+                </div>
+
+                <div id="offcanvas-slide" uk-offcanvas="flip: true">
+                    <div class="uk-offcanvas-bar">
+
+                        <ul class="uk-nav uk-nav-default" style="font-family: mr-eaves-sans; font-size: 20px">
+                            <li class="uk-active"><a href="index.html">HOME</a></li>
+                            <li><a href="projects.html">PROJECTS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="data_art.html">DATA ART</a></li>
+                            <li class="uk-nav-divider"></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="uk-text-center uk-heading-hero uk-grid-large projects-header-container " uk-grid style="">
+
+
+            <div class="uk-width-1-2@m uk-animation-fade" style="">
+                <div class="center-div" style="font-color: black; margin-top: 20%; font-family: 'Proxima Nova'; opacity: 1.0">
+                    <h1 style="padding-right: 35px; text-align: center">About</h1>
+
+                </div>
+
+                <a href="#section-2" class="uk-icon-button uk-scroll" uk-icon="icon: chevron-down" style="margin-right: 40px; width:100px; height:100px"></a>
+            </div>
+
+            <div class="uk-width-1-2@m">
+                <div class="" style="font-color: black; margin-top: 20%;">
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="center-div social-icon-box" style="width:200px">
+            <a href="https://twitter.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/twitter.svg" /></a>
+            <a href="https://medium.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/medium.svg" /></a>
+            <a href="https://github.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/github.svg" /></a>
+        </div>
+
+
+        <div class="projects-container">
+
+<div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: fade">
+    <div>
+        <a class="uk-inline" href="images/olympics.jpg" caption="Caption 1">
+            <img src="images/olympics.jpg" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="uk-inline" href="images/iwd.png" caption="Caption 2">
+            <img src="images/iwd.png" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="uk-inline" href="images/westminster.png" caption="Caption 3">
+            <img src="images/westminster.png" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="uk-inline" href="images/network-analysis.png" caption="Caption 3">
+            <img src="images/network-analysis.png" alt="">
+        </a>
+    </div>
+</div>
+
+
+
+
+
+            <div class="center-div" style="margin-top:50px; margin-bottom: 50px; max-width:600px">
+                <a href="index.html" class="uk-icon-button" uk-icon="icon: chevron-left" style="width:100px; height:100px"></a>
+            </div>
+        </div>
+        <div class="footer center-div">
+            <p style="color: white;  font-size: 1.6em">A Cooley Collaboration</p>
+            <p style="color: white">♡</p>
+            <p style="color: white">Code by Ben<br />Designs and icons by <a href="https://www.behance.net/margaretco4449" target="_blank">Maggie</a></p>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    UIkit.scroll('.uk-scroll', {
+            duration: 1000,
+            offset: 100,
+        }
+
+    );
+
+    UIkit.icon('.uk-icon-link', {
+        ratio: 2
+    });
+</script>
+
+</html>

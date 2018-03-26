@@ -21,7 +21,7 @@
 
 h1 {
   font-family: "Proxima Nova";
-  font-size: 5.5vmax;
+  font-size: 4.2vmax;
 }
 
 h3 {
@@ -66,6 +66,7 @@ body {
 .uk-heading-hero {
   font-size: 4em;
   color: black;
+
 }
 
 .uk-icon-button:hover {
@@ -90,7 +91,7 @@ body {
 }
 
 .content {
-            overflow-x: hidden;
+
             padding-bottom: -10px;
             height:100%;
 }
@@ -102,7 +103,7 @@ body {
 .landing-header {
    background-image: url("images/spiral-80.svg");
    background-repeat: no-repeat;
-   background-position: 8%0%;
+   background-position: 5%0%;
 }
 
 .projects-header {
@@ -116,7 +117,7 @@ body {
    background-image: url("images/spiral2.svg");
    background-repeat: no-repeat;
    height: 800px;
-   background-position: 90%5%;
+   background-position: 100%5%;
 }
 
 .card-padding {
@@ -235,4 +236,12 @@ width: 50px;
   margin: auto;
   margin-bottom: 200px;
   margin-top: -50px
+}
+
+.hover-box-link a:hover {
+  color: black;
+}
+
+.hover-box-link {
+  color: black;
 }
