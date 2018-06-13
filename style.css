@@ -1,7 +1,7 @@
 @media (min-width: 300px) and (max-width: 650px) {
 
     h1 {
-        background-color: #F8F8F8;
+        background-color: none;
     }
 
     .icons-in-box {
@@ -22,6 +22,11 @@
 h1 {
   font-family: "Proxima Nova";
   font-size: 4.2vmax;
+}
+
+h2 {
+  font-family: "Proxima Nova";
+  font-size: 2.4em;
 }
 
 h3 {
@@ -45,6 +50,7 @@ p {
 html {
     position: relative;
     min-height: 100%;
+    background-color: white;
 }
 
 
@@ -52,6 +58,12 @@ html {
 body {
   position: relative;
   margin: 0 0; /* bottom = footer height */
+  background-color: white;
+
+}
+
+.bold {
+  font-weight: 400
 }
 
 .uk-animation-fade {
@@ -69,6 +81,14 @@ body {
 
 }
 
+.landing-text {
+  text-align: left;
+  color: black;
+  max-width: 650px;
+  margin-top: 15%;
+  font-family: 'Proxima Nova'
+}
+
 .uk-icon-button:hover {
   background-color: #848484;
 }
@@ -81,7 +101,12 @@ body {
 .skills-container {
   max-width: 1200px;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+}
+
+.skills-header {
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .projects-container {
@@ -91,7 +116,6 @@ body {
 }
 
 .content {
-
             padding-bottom: -10px;
             height:100%;
 }
@@ -103,7 +127,8 @@ body {
 .landing-header {
    background-image: url("images/spiral-80.svg");
    background-repeat: no-repeat;
-   background-position: 5%0%;
+   background-position: 95%0%;
+   background-size: 600px 600px;
 }
 
 .projects-header {
@@ -127,7 +152,7 @@ body {
 .uk-button-primary {
   background-color: gray;
   width: 200px;
-  height: 70px;
+  height: 50px;
   margin: auto;
 }
 
@@ -141,9 +166,18 @@ text-align: center;
 
 .uk-button-primary:hover {
 background-color: #333333;
-margin: auto;
-padding-top: 15px;
-text-align: center;
+}
+
+.modal-button {
+  background-color: gray;
+  width: 140px;
+  height: 40px;
+  margin: auto;
+}
+
+.hover-button {
+  font-size: 22px;
+  font-family: mr-eaves-sans, sans-serif;
 }
 
 .footer {
@@ -204,7 +238,6 @@ text-align: center;
   max-width: 200px;
   overflow-y: hidden;
   overflow-x:auto;
-  background-color: #F8F8F8;
 }
 
 .icon-box {
@@ -227,7 +260,7 @@ width: 50px;
 }
 
 .skill-icon {
-  font-size: 0.9em;
+  font-size: 1.0em;
   margin-top: 1px;
   margin-bottom: -3px
 }
@@ -235,7 +268,7 @@ width: 50px;
 .view-projects-button {
   margin: auto;
   margin-bottom: 200px;
-  margin-top: -50px
+  margin-top: 50px
 }
 
 .hover-box-link a:hover {
