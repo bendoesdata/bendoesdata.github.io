@@ -151,10 +151,17 @@ body {
 }
 
 .uk-button-primary {
-  background-color: gray;
-  width: 200px;
-  height: 50px;
-  margin: auto;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 150px;
+  border-radius: 24px;
 }
 
 a.uk-button-primary {
@@ -163,14 +170,45 @@ font-family: "Proxima Nova";
 margin: auto;
 padding-top: 15px;
 text-align: center;
+text-decoration: none;
+padding: 20px;
 }
 
+.button-landing{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 150px;
+    border-radius: 24px;
+}
+
+a.button-landing {
+font-size: 16px;
+font-family: "Proxima Nova";
+color: white;
+margin: auto;
+text-decoration: none;
+text-align: center;
+}
+
+.button-landing:hover {
+background-color: gray;
+}
+
+
+
 .uk-button-primary:hover {
-background-color: #333333;
+background-color: gray;
 }
 
 .modal-button {
-  background-color: gray;
+  background-color: black;
   width: 140px;
   height: 40px;
   margin: auto;
@@ -266,11 +304,7 @@ width: 50px;
   margin-bottom: -3px
 }
 
-.view-projects-button {
-  margin: auto;
-  margin-bottom: 200px;
-  margin-top: 50px
-}
+
 
 .hover-box-link a:hover {
   color: black;
