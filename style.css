@@ -207,11 +207,13 @@ background-color: gray;
 background-color: gray;
 }
 
-.modal-button {
+.modal-button:hover {
   background-color: black;
-  width: 140px;
-  height: 40px;
-  margin: auto;
+  color: white;
+}
+
+.modal-button {
+
 }
 
 .hover-button {
