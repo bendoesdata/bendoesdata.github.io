@@ -328,3 +328,7 @@ width: 50px;
 .hover-box-link {
   color: black;
 }
+
+.dis-none{
+    display: none;
+}

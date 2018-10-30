@@ -26,22 +26,44 @@
     <div class="content projects-header">
 
         <!-- navbar -->
-        <div class="uk-margin" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 400">
-            <nav data-uk-sticky class=" uk-margin uk-navbar uk-navbar-container uk-navbar-transparent uk-navbar-right" style="background-color: rgba(255,255,255,0); height: 20px">
-                <div class="uk-navbar-right" style="padding-top: 30px; padding-right: 10px">
-                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#offcanvas-slide"></a>
+        <div class="uk-margin" uk-sticky=" sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 400">
+            <nav data-uk-sticky class=" uk-margin uk-navbar uk-navbar-container uk-navbar-transparent uk-navbar-right" style="background-color: rgba(255,255,255,1); height: 80px">
+              <a href="index.html" style="text-align: left; margin-top: 5px; margin-left: 10px; font-size: 2vmax; color: black; text-decoration: none">
+                Benjamin Cooley
+              </a>
+
+                <!-- desktop navbar -->
+                <div class="uk-navbar-right" id="desktop-nav" style="padding-top: 0px; padding-right: 10px">
+                  <ul class="uk-navbar-nav uk-nav-default uk-hidden-small" style="font-family: open-sans; font-size: 20px">
+                      <li><a href="index.html">HOME</a></li>
+                      <li class="uk-active"><a href="projects.html">PROJECTS</a></li>
+                      <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
+                      <li><a href="about.html">ABOUT</a></li>
+                      <!--<li><a href="data_art.html">DATA ART</a></li>-->
+                      <li class="uk-nav-divider"></li>
+
+                  </ul>
+
+
                 </div>
 
-                <div id="offcanvas-slide" uk-offcanvas="flip: true">
+                <!-- mobile navbar -->
+                <div id="navbar-collapse-toggle" class="uk-navbar-right" style="padding-top: 30px; padding-right: 10px">
+                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#navbar_collapse"></a>
+                </div>
+
+                <div id="navbar_collapse" class="navbar-collapse" uk-offcanvas="flip: true">
                     <div class="uk-offcanvas-bar">
+                      <ul class="uk-nav uk-nav-default" style="font-family: open-sans; font-size: 20px">
+                          <li><a href="#">HOME</a></li>
+                          <li class="uk-active"><a href="projects.html">PROJECTS</a></li>
+                          <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
+                          <li><a href="about.html">ABOUT</a></li>
+                          <!--<li><a href="data_art.html">DATA ART</a></li>-->
+                          <li class="uk-nav-divider"></li>
 
-                        <ul class="uk-nav uk-nav-default" style="font-family: mr-eaves-sans; font-size: 20px">
-                            <li class="uk-active"><a href="index.html">HOME</a></li>
-                            <li><a href="projects.html">PROJECTS</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
-                            <li class="uk-nav-divider"></li>
+                      </ul>
 
-                        </ul>
 
                     </div>
                 </div>
@@ -832,6 +854,22 @@
     UIkit.icon('.uk-icon-link', {
         ratio: 2
     });
+</script>
+
+<script>
+// if less than 670 switch to Desktop index
+if (window.outerWidth < 669) {
+
+  var element = document.getElementById("desktop-nav");
+    element.classList.add("dis-none");
+
+};
+
+if (window.outerWidth > 669) {
+  //if window width is more than  to 770px;
+  var element = document.getElementById("navbar-collapse-toggle");
+    element.classList.add("dis-none");
+};
 </script>
 
 </html>

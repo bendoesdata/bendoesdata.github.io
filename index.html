@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/flx2nba.css">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="uikit-3.0.0-beta.34/js/uikit.min.js"></script>
     <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
 </head>
@@ -20,28 +20,47 @@
     <div class="content">
       <!-- navbar -->
         <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 400">
-            <nav class="uk-navbar-container uk-navbar-transparent uk-navbar-right" style="background-color: rgba(255,255,255,0); height: 20px">
-              <p style="text-align: left; margin-top: 50px; margin-left: 10px; font-size: 1.8vmax">
+            <nav class="uk-navbar-container uk-navbar-transparent uk-navbar-right" style="background-color: rgba(255,255,255,1); height: 80px">
+              <a href="index.html" style="text-align: left; margin-top: 5px; margin-left: 10px; font-size: 2vmax; color: black; text-decoration: none">
                 Benjamin Cooley
-              </p>
-                <div class="uk-navbar-right" style="padding-top: 30px; padding-right: 10px">
-                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#offcanvas-slide"></a>
+              </a>
+
+                <!-- desktop navbar -->
+                <div class="uk-navbar-right" id="desktop-nav" style="padding-top: 0px; padding-right: 10px">
+                  <ul class="uk-navbar-nav uk-nav-default uk-hidden-small" style="font-family: open-sans; font-size: 20px">
+                      <li class="uk-active"><a href="#">HOME</a></li>
+                      <li><a href="projects.html">PROJECTS</a></li>
+                      <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
+                      <li><a href="about.html">ABOUT</a></li>
+                      <!--<li><a href="data_art.html">DATA ART</a></li>-->
+                      <li class="uk-nav-divider"></li>
+
+                  </ul>
+
+
                 </div>
 
-                <div id="offcanvas-slide" uk-offcanvas="flip: true">
+                <!-- mobile navbar -->
+                <div id="navbar-collapse-toggle" class="uk-navbar-right" style="padding-top: 30px; padding-right: 10px">
+                    <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#navbar_collapse"></a>
+                </div>
+
+                <div id="navbar_collapse" class="navbar-collapse" uk-offcanvas="flip: true">
                     <div class="uk-offcanvas-bar">
+                      <ul class="uk-nav uk-nav-default" style="font-family: open-sans; font-size: 20px">
+                          <li class="uk-active"><a href="#">HOME</a></li>
+                          <li><a href="projects.html">PROJECTS</a></li>
+                          <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
+                          <li><a href="about.html">ABOUT</a></li>
+                          <!--<li><a href="data_art.html">DATA ART</a></li>-->
+                          <li class="uk-nav-divider"></li>
 
-                        <ul class="uk-nav uk-nav-default" style="font-family: mr-eaves-sans; font-size: 20px">
-                            <li class="uk-active"><a href="#">HOME</a></li>
-                            <li><a href="projects.html">PROJECTS</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
-                            <!--<li><a href="data_art.html">DATA ART</a></li>-->
-                            <li class="uk-nav-divider"></li>
+                      </ul>
 
-                        </ul>
 
                     </div>
                 </div>
+
             </nav>
         </div>
 
@@ -137,6 +156,8 @@
                                 Feel like chatting? I <a target="_blank" href="https://twitter.com/bendoesdata">tweet</a> and <a target="_blank" href="mailto:benjamincooley94@gmail.com">email</a> occasionally. You can also find my latest CV <a target="_blank" href="https://www.cakeresume.com/s--JEywkYguN7UmiTqLsBmOZg--/benjamin-cooley">here</a>.
                               </p>
 
+
+
                               <div class="center-div icon-box" style="margin: auto; margin-top: 50px">
                                 <div class="icons-in-box">
                                     <img class="icons-in-box" src="images/icons/table.svg" />
@@ -226,15 +247,29 @@
         UIkit.icon('.uk-icon-link', {
             ratio: 2
         });
+
+    </script>
+
+    <script>
+
     </script>
 
 </body>
 
 <script>
-// if wider than 670 switch to Desktop index
-// if (window.outerWidth < 669) {
-//   document.location ="mobile-index.html";
-// };
+// if less than 670 switch to Desktop index
+if (window.outerWidth < 669) {
+
+  var element = document.getElementById("desktop-nav");
+    element.classList.add("dis-none");
+
+};
+
+if (window.outerWidth > 669) {
+  //if window width is more than  to 770px;
+  var element = document.getElementById("navbar-collapse-toggle");
+    element.classList.add("dis-none");
+};
 </script>
 
 </html>
