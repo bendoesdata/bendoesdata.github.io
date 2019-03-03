@@ -1,0 +1,29 @@
+.uk-article {
+  padding:20px;
+  max-width: 600px;
+  margin: auto;
+
+}
+
+h1 {
+
+}
+
+h3 {
+
+}
+
+p {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: black;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+article {
+  margin-top: -10px;
+}
+
+.footer {
+  padding: 20px;
+}
