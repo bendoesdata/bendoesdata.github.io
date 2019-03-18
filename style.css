@@ -49,6 +49,16 @@ p {
   font-weight: lighter;
 }
 
+.home-text {
+  max-width: 600px;
+  color: black;
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 a {
   color: black;
   text-decoration: underline;
