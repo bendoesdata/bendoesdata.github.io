@@ -1,1 +1,14 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320"><defs><style>.cls-1,.cls-2,.cls-3{fill:none;stroke-miterlimit:10;}.cls-1{stroke:#666;stroke-width:5.06px;}.cls-2,.cls-3{stroke:#000;}.cls-2{stroke-width:6.25px;}.cls-3{stroke-width:5.61px;}</style></defs><title>Ben-Portfolio</title><g id="terminal_Icon" data-name="terminal Icon"><circle class="cls-1" cx="160" cy="160" r="151.25"/><polyline class="cls-2" points="74.29 116.75 148.25 154.25 74.29 191.75"/><line class="cls-3" x1="176.25" y1="189.75" x2="233.25" y2="189.75"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 320" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:6.25;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:5.61;stroke-miterlimit:10;}
+</style>
+<title>Ben-Portfolio</title>
+<g id="terminal_Icon">
+	<polyline class="st0" points="74.3,116.8 148.2,154.2 74.3,191.8 	"/>
+	<line class="st1" x1="176.2" y1="189.8" x2="233.2" y2="189.8"/>
+</g>
+</svg>

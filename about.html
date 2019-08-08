@@ -1,212 +1,96 @@
-<!Doctype HTML>
-
-<html class="">
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
 <head>
-  <title>About</title>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Benjamin Cooley portfolio - Reed State of Skills</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-  <link rel="stylesheet" href="uikit-3.0.0-beta.34/css/uikit.css" />
-  <link rel="stylesheet" href="style.css" />
 
-    <script src="uikit-3.0.0-beta.34/js/uikit.min.js"></script>
-    <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/flx2nba.css">
 
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
-<body>
-<div class="content about-header">
 
-  <!-- navbar -->
-  <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 400">
-      <nav data-uk-sticky class="uk-navbar-container uk-navbar-transparent uk-navbar-right" style="background-color: rgba(255,255,255,1); height: 80px">
-        <a href="index.html" style="text-align: left; margin-top: 5px; margin-left: 10px; font-size: 2vmax; color: black; text-decoration: none">
-          Benjamin Cooley
-        </a>
+<body class="is-preload">
 
-          <!-- desktop navbar -->
-          <div class="uk-navbar-right" id="desktop-nav" style="padding-top: 0px; padding-right: 10px">
-            <ul class="uk-navbar-nav uk-nav-default uk-hidden-small" style="font-family: open-sans; font-size: 20px">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
-                <li class="uk-active"><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <!--<li><a href="data_art.html">DATA ART</a></li>-->
-                <li class="uk-nav-divider"></li>
-
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="title">Hyperspace</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="generic.html" class="active">Generic</a></li>
+                <li><a href="elements.html">Elements</a></li>
             </ul>
+        </nav>
+    </header>
 
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-          </div>
+        <!-- Main -->
+        <section id="main" class="wrapper">
+            <div class="inner">
+                <h1 class="major">The State of Skills</h1>
+                <span class="image fit"><img src="images/reed-sos.gif" alt="" /></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="project-description col-md-6">
+                            <p>
+                                Reed Global wanted to produce a one-of-a-kind report on the most important skills in the workforce. In order to provide a unique take on what can be an over-reported topic, I produced an original analysis by combining multiple different datasets.
+                            </p>
+                            <p>
+                                Using the Open Skills API from the O*NET database, I identified key job roles within Reed's four focus industries to analyse the data. I then took the top role names and skills for each job and pulled historical data from Google Trends to see how search
+                                interest has changed over time.
+                            </p>
+                            <p>
+                                With this analysis complete, I worked closely with the design team to find the best solution for visualizing the data in a new and exciting way. This dive into search interest required providing some historical context. In order to pull out trends for
+                                the user, I used data journalism and research to answer the "why" behind key changes in search interest for job roles.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
 
-          <!-- mobile navbar -->
-          <div id="navbar-collapse-toggle" class="uk-navbar-right" style="padding-top: 30px; padding-right: 10px">
-              <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#navbar_collapse"></a>
-          </div>
+                            <img width=100% class="image" src="images/reed-sos.gif" alt="" />
 
-          <div id="navbar_collapse" class="navbar-collapse" uk-offcanvas="flip: true">
-              <div class="uk-offcanvas-bar">
-                <ul class="uk-nav uk-nav-default" style="font-family: open-sans; font-size: 20px">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="projects.html">PROJECTS</a></li>
-                    <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
-                    <li class="uk-active"><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <!--<li><a href="data_art.html">DATA ART</a></li>-->
-                    <li class="uk-nav-divider"></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                </ul>
-
-
-              </div>
-          </div>
-      </nav>
-  </div>
-
-
-  <div class="uk-text-center uk-heading-hero uk-grid-large projects-header-container " uk-grid style="">
-
-
-    <div class="uk-width-1-2@m uk-animation-fade" style="">
-        <div class="center-div" style="font-color: black; margin-top: 20%; font-family: 'Proxima Nova'; opacity: 1.0">
-          <h1 style="padding-right: 35px; text-align: center">About</h1>
-
-        </div>
-
-        <a href="#section-3" class="uk-icon-button uk-scroll" uk-icon="icon: chevron-down" style="width:100px; height:100px; margin-right: 40px; background-color: transparent"></a>
     </div>
 
-      <div class="uk-width-1-2@m">
-          <div class="" style="font-color: black; margin-top: 20%;">
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
 
-          </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-      </div>
-
-
-
-  </div>
-
-
-  <div class="projects-container" >
-
-
-      <div class="uk-child-width-expand@s uk-text-center card-padding" uk-grid>
-          <div>
-              <div class="uk-card uk-card-default uk-card-body center-div" style="max-width: 600px; margin: auto; padding: 40px">
-                  <img style="width: 150px; margin-bottom: 30px" src="images/ben-head-round.jpeg" />
-
-                  <p id ="section-3" style="text-align: left">My name is Benjamin, but most people just stick to Ben (which I'm cool with). I tell visual stories with data through a combination of data design, journalism and data science.
-                  </p>
-
-                  <p style="text-align: left">I started out in the journalism world circa 2016 before taking a deep dive into data at the Goldsmiths MSc Digital Journalism program. Now I make data-driven stories, content and visualizations with the <a href="www.infogr8.com" target="_blank">infogr8</a> team.
-                    </p>
-                    <p style="text-align: left">Based in London, I spend most of my time thinking about how to communicate with data, how to humanise data and how to make data more accessible through smart visualisation.</p>
-                    <p style="text-align: left">
-                      I also write a weekly data newsletter with links to resources on data visualisation, data science and technology. You can signup for that <a target="_blank" href="https://mailchi.mp/7029eac7f34a/data-curious-signup">here</a>.
-                    </p>
-
-                    <p style="text-align: left">
-                      Feel like chatting? I <a target="_blank" href="https://twitter.com/bendoesdata">tweet</a> and <a target="_blank" href="mailto:benjamincooley94@gmail.com">email</a> occasionally.  You can also find my latest CV <a target="_blank" href="https://www.cakeresume.com/s--JEywkYguN7UmiTqLsBmOZg--/benjamin-cooley">here</a>.
-                    </p>
-
-                    <div class="center-div icon-box" style="margin: auto">
-                      <div class="icons-in-box">
-                          <img class="icons-in-box" src="images/icons/table.svg" />
-                          <p class="skill-icon">
-                              Data
-                          </p>
-                      </div>
-                        <div class="icons-in-box">
-                            <img src="images/icons/pencil.svg" />
-                            <p class="skill-icon">
-                                Design
-                            </p>
-                        </div>
-                        <div class="icons-in-box">
-                            <img src="images/icons/bar-chart.svg" />
-                            <p class="skill-icon">
-                                Viz
-                            </p>
-                        </div>
-                        <div class="icons-in-box">
-                            <img src="images/icons/laptop.svg" />
-                            <p class="skill-icon">
-                                Writing
-                            </p>
-                        </div>
-                        <div class="icons-in-box">
-                            <img src="images/icons/terminal.svg" />
-                            <p class="skill-icon">
-                                Code
-                            </p>
-                        </div>
-                        <div class="icons-in-box">
-                            <img src="images/icons/glasses.svg" />
-                            <p class="skill-icon">
-                                Research
-                            </p>
-                        </div>
-
-                    </div>
-              </div>
-          </div>
-
-      </div>
-
-      <div class="center-div" style="margin-top:50px; margin-bottom: 50px; max-width:600px" >
-          <a href="index.html" class="uk-icon-button" uk-icon="icon: chevron-left" style="width:100px; height:100px; background-color: transparent"></a>
-      </div>
-
-  </div>
-  <div class="center-div footer projects-container" style="height: 160px; width:100%; margin-top: 50px">
-    <hr style="color: black" />
-    <!-- social icons -->
-            <div class="center-div social-icon-box" style="margin-top: 10px">
-              <h4>
-                Connect
-              </h4>
-                <a href="https://twitter.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/twitter.svg" /></a>
-                <a href="https://medium.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/medium.svg" /></a>
-                <a href="https://github.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/github.svg" /></a>
-            </div>
-      <p style="font-size: 1.2em">This site was A Cooley Collaboration</p>
-      <p style="">♡</p>
-      <p style="">Code by Ben<br />Designs and icons by <a style="color: black" href="https://heymagg.com/" target="_blank">Maggie</a></p>
-  </div>
-
-</div>
 </body>
-
-<script>
-    UIkit.scroll('.uk-scroll', {
-            duration: 1000,
-            offset: 100,
-        }
-
-    );
-
-    UIkit.icon('.uk-icon-link', {
-        ratio: 2
-    });
-</script>
-
-<script>
-// if less than 670 switch to Desktop index
-if (window.outerWidth < 669) {
-
-  var element = document.getElementById("desktop-nav");
-    element.classList.add("dis-none");
-
-};
-
-if (window.outerWidth > 669) {
-  //if window width is more than  to 770px;
-  var element = document.getElementById("navbar-collapse-toggle");
-    element.classList.add("dis-none");
-};
-</script>
 
 </html>

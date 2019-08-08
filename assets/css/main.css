@@ -188,7 +188,7 @@ html {
 }
 
 body {
-    background: #312450;
+    background: #393447;
 }
 
 body.is-preload *,
@@ -273,6 +273,7 @@ i {
 
 p {
     margin: 0 0 2em 0;
+    color: #ffffff;
 }
 
 h1,
@@ -308,10 +309,10 @@ h1.major {
 }
 
 h1.major:after {
-    background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-    background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-    background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-    background-image: linear-gradient(to right, #5e42a6, #b74e91);
+    background-image: -moz-linear-gradient(to right, #0d8ce0, #a9d8c8);
+    background-image: -webkit-linear-gradient(to right, #0d8ce0, #a9d8c8);
+    background-image: -ms-linear-gradient(to right, #0d8ce0, #a9d8c8);
+    background-image: linear-gradient(to right, #0d8ce0, #a9d8c8);
     -moz-transition: max-width 0.2s ease;
     -webkit-transition: max-width 0.2s ease;
     -ms-transition: max-width 0.2s ease;
@@ -2009,7 +2010,7 @@ button:hover:active:after,
     }
     .features section .icon {
         left: 1.5em;
-        top: 2em;
+        top: 1.5em;
     }
 }
 
@@ -2288,6 +2289,9 @@ input[type="radio"]+label:before {
     text-decoration: none;
     border-bottom: none;
     position: relative;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 70px
 }
 
 .icon:before {
@@ -2340,15 +2344,15 @@ input[type="radio"]+label:before {
 }
 
 .wrapper.style1-alt .icon.major:before {
-    color: #493382;
+    color: rgb(74, 187, 149);
 }
 
 .wrapper.style2 .icon.major:before {
-    color: #5052b5;
+    color: rgb(74, 187, 149);
 }
 
 .wrapper.style2-alt .icon.major:before {
-    color: #3e4094;
+    color: rgb(74, 187, 149);
 }
 
 .wrapper.style3 .icon.major:before {
@@ -2376,7 +2380,7 @@ input[type="radio"]+label:before {
 
 .image.left,
 .image.right {
-    max-width: 40%;
+    max-width: 30%;
 }
 
 .image.left img,
@@ -2813,7 +2817,7 @@ body.is-ie .spotlights>section {
     -webkit-transition: opacity 1s ease;
     -ms-transition: opacity 1s ease;
     transition: opacity 1s ease;
-    background: rgba(49, 36, 80, 0.9);
+    background: rgb(74, 187, 149, 0.8);
     content: '';
     display: block;
     height: 100%;
@@ -3013,31 +3017,35 @@ table.alt tfoot {
 }
 
 .wrapper.alt {
-    background-color: #261c3e;
+    background-color: #333333;
 }
 
 .wrapper.style1 {
-    background-color: #2a363b;
+    background-color: #393447;
 }
 
 .wrapper.style1-alt {
-    background-color: #133d8b;
+    background-color: #333333;
 }
 
 .wrapper.style2 {
-    background-color: #2a363b;
+    background-color: rgb(126, 185, 165);
 }
 
 .wrapper.style2-alt {
-    background-color: #2a363b;
+    background-color: rgb(85, 172, 143);
 }
 
 .wrapper.style3 {
-    background-color: #133d8b;
+    background-color: #D16B54;
 }
 
 .wrapper.style3-alt {
-    background-color: #A9D8C8;
+    background-color: rgb(88, 175, 146);
+}
+
+.wrapper.style4 {
+    background-color: #E8C95D;
 }
 
 .wrapper.fullscreen {
@@ -3142,7 +3150,7 @@ body.is-preload .wrapper.fade>.inner {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    background-color: #5e42a6;
+    background-color: #393447;
     cursor: default;
     padding: 1.75em 2em;
 }
@@ -3523,14 +3531,14 @@ body.is-ie #sidebar>.inner {
 }
 
 #sidebar nav a:before {
-    background: #3c2c62;
+    background: #333333;
 }
 
 #sidebar nav a:after {
-    background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-    background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-    background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-    background-image: linear-gradient(to right, #5e42a6, #b74e91);
+    background-image: -moz-linear-gradient(to right, 0 #0d8ce0, #a9d8c8);
+    background-image: -webkit-linear-gradient(to right, #0d8ce0, #a9d8c8);
+    background-image: -ms-linear-gradient(to right, #0d8ce0, #a9d8c8);
+    background-image: linear-gradient(to right, #0d8ce0, #a9d8c8);
     -moz-transition: max-width 0.2s ease;
     -webkit-transition: max-width 0.2s ease;
     -ms-transition: max-width 0.2s ease;
@@ -3627,7 +3635,7 @@ body.is-preload #sidebar nav ul li {
 
 #intro {
     background-attachment: fixed;
-    background-image: url("images/intro.svg");
+    /* background-image: url("images/intro.svg"); */
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -3653,4 +3661,25 @@ body.is-preload #sidebar nav ul li {
     #intro {
         background-attachment: scroll;
     }
+}
+
+.project-description {
+    max-width: 450px;
+    margin: auto
+}
+
+.project {
+    margin: auto
+}
+
+.project-body {
+    background: #FFFFFF;
+}
+
+.project-text {
+    color: #333333;
+}
+
+.project-text p {
+    color: #333333;
 }
