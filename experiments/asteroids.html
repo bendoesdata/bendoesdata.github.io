@@ -82,7 +82,7 @@
         #earth {
             position: absolute;
             left: -150px;
-            top: 38%
+            top: 50%
         }
         
         .tooltip {
@@ -172,7 +172,7 @@
         <!-- Trigger/Open The Modal -->
         <button id="myBtn">about</button>
 
-        <img src="images/earth.svg" id="earth" alt="" width=200>
+        <!-- <img src="images/earth.svg" id="earth" alt="" width=200> -->
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -282,6 +282,13 @@
                 .html('(not scaled to size)')
                 .attr("fill", "gray")
                 .attr('class', "small-text");
+
+            // add the image of earth
+            svg.append('svg:image')
+                .attr('xlink:href', 'https://bendoesdata.github.io/experiments/images/earth.svg')
+                .attr('x', -150)
+                .attr('y', (h / 2) - 90)
+                .attr("width", 200)
 
             // title annotation
             svg.append("text")
