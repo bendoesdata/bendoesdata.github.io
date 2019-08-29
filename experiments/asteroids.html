@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Near Earth Asteroids </title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content/Box */
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            /* Could be more or less, depending on screen size */
+        }
+        /* The Close Button */
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        button {
+            background-color: gray;
+            /* Green */
+            border: solid 1px white;
+            color: white;
+            padding: 8px 18px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 10px;
+            position: absolute;
+            left: 80%;
+            top: 80%;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        #earth {
+            position: absolute;
+            left: -150px;
+            top: 38%
+        }
+        
+        .tooltip {
+            position: absolute;
+            text-align: left;
+            width: 300px;
+            height: 240px;
+            padding: 8px;
+            margin-top: -20px;
+            font: 10px sans-serif;
+            background: white;
+            pointer-events: none;
+            background-color: black;
+            border: solid;
+            border-width: 0px;
+            padding: 10px;
+        }
+        
+        .tooltip {
+            color: white
+        }
+        
+        .t-number {
+            font-size: 18px;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .t-title {
+            font-size: 22px;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700
+        }
+        
+        .viz_title {
+            font-family: 'Space Mono', monospace;
+            font-size: 28px
+        }
+        
+        text {
+            font-family: 'Space Mono', monospace;
+            font-size: 14px
+        }
+        
+        .viz-description {
+            font-size: 14px;
+        }
+        
+        .current-date {
+            font-size: 14px;
+            /* font-weight: 700 */
+        }
+        
+        #my_viz {
+            width: 100%;
+            height: 100%
+        }
+        
+        p {
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .scale-text {
+            font-family: 'Space Mono', monospace;
+            fill: gray;
+            font-size: 10px
+        }
+        
+        .normal-text {
+            font-size: 12px;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .small-text {
+            font-size: 9px;
+            fill: rgb(177, 235, 250)
+        }
+        
+        .earth-anno {
+            font-size: 12px;
+            fill: rgb(177, 235, 250)
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">about</button>
+
+        <img src="images/earth.svg" id="earth" alt="" width=200>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>This page streams live asteroid data every day from the NASA NeoWs (Near Earth Object Web Service). Each circle represents an asteroid in Earth's orbit. It's position in relation to blue sphere on the left is it's distance from Earth.</p>
+                <p>Distance is measured in lunar distance, a NASA measurement used to quantify space objects. One lunar distance is the distance from Earth to the Moon.</p>
+                <p>Hover over a circle to learn more about each asteroid.</p>
+            </div>
+
+        </div>
+        <div id="my_viz"></div>
+    </div>
+    <script>
+        // get today's current date and store as var to pass the API
+        var now = new Date();
+        var display_now = new Date();
+        var dd = now.getDate();
+        var mm = now.getMonth() + 1; //January is 0!
+        var yyyy = now.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+
+        now = yyyy + '-' + mm + '-' + dd;
+        var date_options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        };
+        var display_date = display_now.toLocaleDateString("en-US", date_options)
+        console.log(display_date)
+
+        var h = window.innerHeight;
+        var w = window.innerWidth;
+
+        var asteroidPadding = 35;
+
+        d3.json('https://api.nasa.gov/neo/rest/v1/feed?api_key=yLeK5umsbkYxahsLWuYq7XoeWgkseD3cZUXBdzVb', function(data) {
+            console.log(data.near_earth_objects);
+
+            var dataset = data.near_earth_objects[now]
+
+
+            var svg = d3.select("#my_viz").append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+            // black background
+            svg.append("rect")
+                .attr("width", "100%")
+                .attr("height", "100%")
+                .attr("fill", "black");
+
+            // // draw circle for earth
+            // svg.append("ellipse")
+            //     .attr("cx", -80)
+            //     .attr("cy", h / 2)
+            //     .attr("rx", 90)
+            //     .attr("ry", h)
+            //     .attr("fill", "#0431b7");
+
+            // title of viz
+            svg.append("text")
+                .attr("x", w - (w / 2))
+                .attr("y", h / 8)
+                .text('near earth asteroids')
+                .attr("fill", "white")
+                .attr("class", "viz_title");
+
+            // description
+            svg.append("text")
+                .attr("x", w - (w / 2))
+                .attr("y", h / 6)
+                .text('explore the asteroids closest to earth')
+                .attr("fill", "white")
+                .attr("class", "viz-description");
+
+            // showing current date
+            svg.append("text")
+                .attr("x", w - (w / 2))
+                .attr("y", h / 5)
+                .text('today is ' + display_date)
+                .attr("fill", "white")
+                .attr("class", "current-date");
+
+            // Earth annotation
+            svg.append("text")
+                .attr("x", 10)
+                .attr("y", (h / 2) - 110)
+                .html('Earth')
+                .attr("fill", "gray")
+                .attr('class', "earth-anno");
+
+            // scaled to size annotation
+            svg.append("text")
+                .attr("x", 10)
+                .attr("y", (h / 2) - 95)
+                .html('(not scaled to size)')
+                .attr("fill", "gray")
+                .attr('class', "small-text");
+
+            // title annotation
+            svg.append("text")
+                .attr("x", 60)
+                .attr("y", h - (h / 3))
+                .text('hover over asteroids for details')
+                .attr("fill", "white")
+                .attr('font-size', 12);
+
+            // Select all circles (and then create them)
+            var circles = svg.selectAll("circle")
+                .data(dataset)
+                .enter()
+                .append("circle");
+
+            // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
+            // Its opacity is set to 0: we don't see it by default.
+            var tooltip = d3.select("body")
+                .append("div")
+                .style("opacity", 0)
+                .attr("class", "tooltip")
+                .style("display", "none")
+
+            var mouseover = function(d) {
+                tooltip
+                    .transition()
+                    .duration(600)
+                tooltip
+                    .style("opacity", 1)
+                    .style("display", "inline")
+                d3.select(this)
+                    .attr('opacity', 1);
+            }
+
+            // create number formatter to 2 decmials for tooltip
+            formatDecimal = d3.format(".2f")
+
+
+            var mousemove = function(d) {
+                tooltip
+                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='normal-text'>will pass earth on " + (d.close_approach_data[0].close_approach_date) + "</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar miles away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.miles.estimated_diameter_max) + "</span> <br><span class='normal-text'>mi wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
+                    .style("left", ((d3.mouse(this)[0]) - 50) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+                    .style("top", (h - (h / 2) + 50) + "px")
+                    .attr("display", "absolute");
+
+                // replace the style position with below if you want tooltip to follow mouse
+                // (d3.mouse(this)[0] + 20)
+                // (d3.mouse(this)[1])
+            }
+
+            // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
+            var mouseleave = function(d) {
+                tooltip
+                    .transition()
+                    .duration(600)
+                    .style("opacity", 0)
+                d3.select(this)
+                    .attr('opacity', 0.8);
+            }
+
+            var multiplier = 6;
+
+            // scale annotation
+            svg.append("text")
+                .attr("x", (5 * multiplier) + asteroidPadding)
+                .attr("y", (h - (h / 2) - 30))
+                .text('5 moons away')
+                .attr('text-anchor', 'start')
+                .attr("class", "scale-text");
+
+            svg.append("line")
+                .attr("x1", (5 * multiplier) + asteroidPadding)
+                .attr("y1", (h - (h / 2) - 20))
+                .attr("x2", (5 * multiplier) + asteroidPadding)
+                .attr("y2", (h - (h / 2) + 20))
+                .attr("stroke-width", 0.5)
+                .attr("stroke", "white");
+
+            // set the location and area of circles
+            circles.attr("cx", function(d, i) {
+                    return ((d.close_approach_data[0].miss_distance.lunar * multiplier) + asteroidPadding);
+                })
+                .attr("cy", h / 2)
+                .attr("r", function(d) {
+                    return d.estimated_diameter.miles.estimated_diameter_max * 38;
+                })
+                .attr("fill", "white")
+                .attr("opacity", 0.8)
+                // on hover, change the color of circles
+                .on("mouseover", mouseover)
+                .on("mousemove", mousemove)
+                .on("mouseleave", mouseleave)
+
+
+        });
+    </script>
+</body>
+
+<script>
+    // script for modal button
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
