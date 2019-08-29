@@ -144,10 +144,26 @@
             font-family: 'Space Mono', monospace;
         }
         
+        div .credits {
+            position: absolute;
+            top: 95%;
+            left: 50%
+        }
+        
+        .credits {
+            color: white;
+            font-size: 10px
+        }
+        
         .scale-text {
             font-family: 'Space Mono', monospace;
             fill: gray;
             font-size: 10px
+        }
+        
+        .link {
+            color: white;
+            text-decoration: underline
         }
         
         .normal-text {
@@ -188,6 +204,11 @@
         </div>
         <div id="my_viz"></div>
     </div>
+    <footer>
+        <div style="margin: auto">
+            <p class="credits">built by <a class="link" href="https://bendoesdata.github.io/">bendoesdata</a></p>
+        </div>
+    </footer>
     <script>
         // get today's current date and store as var to pass the API
         var now = new Date();
