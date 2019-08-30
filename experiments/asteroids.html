@@ -118,7 +118,7 @@
         
         .viz_title {
             font-family: 'Space Mono', monospace;
-            font-size: 28px
+            font-size: 32px
         }
         
         text {
@@ -276,7 +276,7 @@
             svg.append("text")
                 .attr("x", w - (w / 2))
                 .attr("y", h / 6)
-                .text('explore the asteroids closest to earth')
+                .text('explore the asteroids passing earth today:')
                 .attr("fill", "white")
                 .attr("class", "viz-description");
 
@@ -284,7 +284,7 @@
             svg.append("text")
                 .attr("x", w - (w / 2))
                 .attr("y", h / 5)
-                .text('today is ' + display_date)
+                .text('' + display_date)
                 .attr("fill", "white")
                 .attr("class", "current-date");
 
@@ -307,7 +307,7 @@
             // add the image of earth
             svg.append('svg:image')
                 .attr('xlink:href', 'https://bendoesdata.github.io/experiments/images/earth.svg')
-                .attr('x', -150)
+                .attr('x', -165)
                 .attr('y', (h / 2) - 90)
                 .attr("width", 200)
 
@@ -350,7 +350,7 @@
 
             var mousemove = function(d) {
                 tooltip
-                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='normal-text'>will pass earth on " + (d.close_approach_data[0].close_approach_date) + "</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar miles away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.miles.estimated_diameter_max) + "</span> <br><span class='normal-text'>mi wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
+                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='normal-text'>will pass earth on " + (d.close_approach_data[0].close_approach_date) + "</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar miles away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.meters.estimated_diameter_max) + "</span> <br><span class='normal-text'>meters wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
                     .style("left", ((d3.mouse(this)[0]) - 50) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
                     .style("top", (h - (h / 2) + 50) + "px")
                     .attr("display", "absolute");
@@ -394,7 +394,7 @@
                 })
                 .attr("cy", h / 2)
                 .attr("r", function(d) {
-                    return d.estimated_diameter.miles.estimated_diameter_max * 38;
+                    return Math.sqrt(d.estimated_diameter.meters.estimated_diameter_max) / 1.5;
                 })
                 .attr("fill", "white")
                 .attr("opacity", 0.8)
