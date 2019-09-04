@@ -167,7 +167,7 @@
         }
         
         .normal-text {
-            font-size: 12px;
+            font-size: 14px;
             font-family: 'Space Mono', monospace;
         }
         
@@ -291,7 +291,7 @@
             // Earth annotation
             svg.append("text")
                 .attr("x", 10)
-                .attr("y", (h / 2) - 110)
+                .attr("y", (h / 2) - 140)
                 .html('Earth')
                 .attr("fill", "gray")
                 .attr('class', "earth-anno");
@@ -299,7 +299,7 @@
             // scaled to size annotation
             svg.append("text")
                 .attr("x", 10)
-                .attr("y", (h / 2) - 95)
+                .attr("y", (h / 2) - 125)
                 .html('(not scaled to size)')
                 .attr("fill", "gray")
                 .attr('class', "small-text");
@@ -307,13 +307,13 @@
             // add the image of earth
             svg.append('svg:image')
                 .attr('xlink:href', 'https://bendoesdata.github.io/experiments/images/earth.svg')
-                .attr('x', -165)
-                .attr('y', (h / 2) - 90)
-                .attr("width", 200)
+                .attr('x', -405)
+                .attr('y', (h / 2) - 210)
+                .attr("width", 440)
 
             // title annotation
             svg.append("text")
-                .attr("x", 60)
+                .attr("x", 100)
                 .attr("y", h - (h / 3))
                 .text('hover over asteroids for details')
                 .attr("fill", "white")
@@ -350,7 +350,7 @@
 
             var mousemove = function(d) {
                 tooltip
-                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='normal-text'>will pass earth on " + (d.close_approach_data[0].close_approach_date) + "</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar miles away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.meters.estimated_diameter_max) + "</span> <br><span class='normal-text'>meters wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
+                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='normal-text'>will pass earth on " + (d.close_approach_data[0].close_approach_date) + "</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar distance away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.meters.estimated_diameter_max) + "</span> <br><span class='normal-text'>meters wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
                     .style("left", ((d3.mouse(this)[0]) - 50) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
                     .style("top", (h - (h / 2) + 50) + "px")
                     .attr("display", "absolute");
@@ -372,18 +372,32 @@
 
             var multiplier = 6;
 
-            // scale annotation
+            // 5 moons annotation (text + line)
             svg.append("text")
                 .attr("x", (5 * multiplier) + asteroidPadding)
                 .attr("y", (h - (h / 2) - 30))
                 .text('5 moons away')
                 .attr('text-anchor', 'start')
                 .attr("class", "scale-text");
-
             svg.append("line")
                 .attr("x1", (5 * multiplier) + asteroidPadding)
                 .attr("y1", (h - (h / 2) - 20))
                 .attr("x2", (5 * multiplier) + asteroidPadding)
+                .attr("y2", (h - (h / 2) + 20))
+                .attr("stroke-width", 0.5)
+                .attr("stroke", "white");
+
+            // 100 moons annotation (text + line)
+            svg.append("text")
+                .attr("x", (100 * multiplier) + asteroidPadding)
+                .attr("y", (h - (h / 2) - 30))
+                .text('100')
+                .attr('text-anchor', 'start')
+                .attr("class", "scale-text");
+            svg.append("line")
+                .attr("x1", (100 * multiplier) + asteroidPadding)
+                .attr("y1", (h - (h / 2) - 20))
+                .attr("x2", (100 * multiplier) + asteroidPadding)
                 .attr("y2", (h - (h / 2) + 20))
                 .attr("stroke-width", 0.5)
                 .attr("stroke", "white");
