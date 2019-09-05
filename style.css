@@ -1,344 +1,385 @@
-@media (min-width: 300px) and (max-width: 900px) {
-
-    h1 {
-        background-color: white;
-        width: 200px
-    }
-
-    .icons-in-box {
-      display: inline-block;
-    margin: 0px;
-    padding: 0px;
-    width: 40px;
-    }
-
-    .view-projects-button {
-      margin: auto;
-      margin-bottom: 250px;
-      margin-top: -50px
-    }
-
-} /* end break point */
-
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
-  font-size: 42px;
-}
-
-h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2.4em;
-}
-
-h3 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.8em;
-}
-
-h4 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
-  text-align: center
-}
-
-p {
-  font-family: 'open sans', sans-serif;
-  font-size: 1em;
-  color: #333333;
-  font-weight: lighter;
-}
-
-.home-text {
-  max-width: 600px;
-  color: black;
-  margin: auto;
-  padding: 10px;
-  text-align: left;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-a {
-  color: black;
-  text-decoration: underline;
-  color: #333333;
-  font-family: 'Open Sans', sans-serif;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-    background-color: white;
-}
-
-
-
-body {
-  position: relative;
-  margin: 0 0; /* bottom = footer height */
-  background-color: white;
-
-}
-
-.bold {
-  font-weight: 400
-}
-
-.uk-animation-fade {
-    -webkit-animation-duration: 2.4s;
-    animation-duration: 2.4s;
-}
-
-.uk-scroll {
-  animation-duration: 2.4s;
-}
-
-.uk-heading-hero {
-  font-size: 4em;
-  color: black;
-
-}
-
-.landing-text {
-  text-align: left;
-  color: black;
-  max-width: 650px;
-  margin-top: 15%;
-  font-family: 'Open Sans'
-}
-
-.uk-icon-button:hover {
-  background-color: #848484;
-}
-
-.center-div {
-  margin:auto;
-  text-align: center;
-}
-
-.skills-container {
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 80px;
-}
-
-.skills-header {
-  margin-top: 10px;
-  margin-bottom: 8px;
-}
-
-.projects-container {
-  max-width: 1100px;
-  opacity: 1.0;
-  margin: auto;
-}
-
-.content {
+        @media (min-width: 300px) and (max-width: 900px) {
+            h1 {
+                background-color: white;
+            }
+            .icons-in-box {
+                display: inline-block;
+                margin: 0px;
+                padding: 0px;
+                width: 40px;
+            }
+            .view-projects-button {
+                margin: auto;
+                margin-bottom: 250px;
+                margin-top: -50px
+            }
+        }
+        /* end break point */
+        
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        @media screen and (min-width: 320px) {
+            h1 {
+                font-size: 36px;
+            }
+        }
+        
+        @media screen and (min-width: 700px) {
+            h1 {
+                font-size: 4.5vw;
+            }
+        }
+        
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 42px;
+        }
+        
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 32px;
+        }
+        
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 22px;
+            text-align: center
+        }
+        
+        p {
+            font-family: 'open sans', sans-serif;
+            font-size: 18px;
+            color: #333333;
+            font-weight: lighter;
+            line-height: 1.4
+        }
+        
+        .home-text {
+            max-width: 600px;
+            color: black;
+            margin: auto;
+            padding: 10px;
+            text-align: left;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        
+        a {
+            color: black;
+            text-decoration: underline;
+            color: #333333;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        html {
+            position: relative;
+            min-height: 100%;
+            background-color: white;
+        }
+        
+        body {
+            position: relative;
+            margin: 0 0;
+            /* bottom = footer height */
+            background-color: white;
+        }
+        
+        .bold {
+            font-weight: 400
+        }
+        
+        .uk-animation-fade {
+            -webkit-animation-duration: 2.4s;
+            animation-duration: 2.4s;
+        }
+        
+        .uk-scroll {
+            animation-duration: 2.4s;
+        }
+        
+        .uk-heading-hero {
+            font-size: 4em;
+            color: black;
+        }
+        
+        .landing-text {
+            text-align: left;
+            color: black;
+            max-width: 750px;
+            margin-top: 25%;
+            font-family: 'Open Sans';
+            padding: 10px
+        }
+        
+        .uk-icon-button:hover {
+            background-color: #848484;
+        }
+        
+        .center-div {
+            margin: auto;
+            text-align: center;
+        }
+        
+        .skills-container {
+            max-width: 1200px;
+            margin: auto;
+            margin-bottom: 80px;
+        }
+        
+        .skills-header {
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        
+        .projects-container {
+            max-width: 1100px;
+            opacity: 1.0;
+            margin: auto;
+        }
+        
+        .content {
             padding-bottom: -10px;
-            height:100%;
-}
-
-.uk-navbar-transparent {
-  background-color: rgba(255,255,255,0);
-}
-
-.landing-header {
-   background-image: url("images/spiral-80.svg");
-   background-repeat: no-repeat;
-   background-position: 95%0%;
-   background-size: 600px 600px;
-}
-
-.projects-header {
-   background-image: url("images/spiral1.svg");
-   background-repeat: no-repeat;
-   height: 800px;
-   background-position: 90%5%;
-}
-
-.about-header {
-   background-image: url("images/spiral2.svg");
-   background-repeat: no-repeat;
-   height: 800px;
-   background-position: 100%5%;
-}
-
-.card-padding {
-  padding: 15px;
-}
-
-.uk-button-primary {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  width: 150px;
-  border-radius: 24px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-a.uk-button-primary {
-font-size: 16px;
-font-family: "Proxima Nova";
-margin: auto;
-padding-top: 15px;
-text-align: center;
-text-decoration: none;
-padding: 20px;
-font-family: 'Open Sans', sans-serif;
-}
-
-.button-landing{
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    width: 150px;
-    border-radius: 24px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-a.button-landing {
-font-size: 16px;
-font-family: 'Open Sans', sans-serif;
-font-weight: 400;
-color: white;
-margin: auto;
-text-decoration: none;
-text-align: center;
-}
-
-.button-landing:hover {
-background-color: gray;
-}
-
-
-
-.uk-button-primary:hover {
-background-color: gray;
-}
-
-.modal-button:hover {
-  background-color: gray;
-  color: white;
-}
-
-.modal-button {
-border: 2px black;
-background-color: black;
-color: white;
-}
-
-.hover-button {
-  font-size: 22px;
-  font-family: mr-eaves-sans, sans-serif;
-}
-
-.footer {
-   width: 100%;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   padding: 1rem;
-   position:relative;
-   bottom: 0;
-   font-size: 0.8em;
-}
-
-#bottom-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 150px;
-    width: 100%;
-    background-color: black;
-}
-
-#bottom-footer a {
-  text-decoration: underline;
-  color: white;
-}
-
-.footer a {
-  text-decoration: underline;
-  color: white;
-}
-
-
-#bottom-footer a:hover {
-  text-decoration: underline;
-  color: gray;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-  color: gray;
-}
-
-.projects-header-container {
-  margin-left: 50px;
-  margin-right: 50px;
-
-}
-
-.social-icon-box {
-  display: block;
-  margin: auto;
-  margin-bottom: 50px;
-  padding: 0px;
-  position: relative;
-  height: auto;
-  max-width: 200px;
-  overflow-y: hidden;
-  overflow-x:auto;
-}
-
-.icon-box {
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  margin-bottom: -5px;
-  position: relative;
-  height: auto;
-  max-width: 400px;
-  overflow-y: hidden;
-  overflow-x:auto;
-}
-
-.icons-in-box {
-  display: inline-block;
-margin: 0px;
-padding: 0px;
-width: 50px;
-}
-
-.skill-icon {
-  font-size: 0.75em;
-  margin-top: 1px;
-  margin-bottom: -3px
-}
-
-
-
-.hover-box-link a:hover {
-  color: black;
-}
-
-.hover-box-link {
-  color: black;
-}
-
-.dis-none{
-    display: none;
-}
+            height: 100%;
+        }
+        
+        .uk-navbar-transparent {
+            background-color: rgba(255, 255, 255, 0);
+        }
+        
+        .landing-header {
+            background-image: url("images/spiral-80.svg");
+            background-repeat: no-repeat;
+            background-position: 95%0%;
+            background-size: 600px 600px;
+        }
+        
+        .projects-header {
+            background-image: url("images/spiral1.svg");
+            background-repeat: no-repeat;
+            height: 800px;
+            background-position: 90%5%;
+        }
+        
+        .about-header {
+            background-image: url("images/spiral2.svg");
+            background-repeat: no-repeat;
+            height: 800px;
+            background-position: 100%5%;
+        }
+        
+        .card-padding {
+            padding: 15px;
+        }
+        
+        .uk-button-primary {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            width: 150px;
+            border-radius: 24px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        a.uk-button-primary {
+            font-size: 16px;
+            font-family: "Proxima Nova";
+            margin: auto;
+            padding-top: 15px;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .button-landing {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            width: 150px;
+            border-radius: 24px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        a.button-landing {
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            color: white;
+            margin: auto;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .button-landing:hover {
+            background-color: gray;
+        }
+        
+        .uk-button-primary:hover {
+            background-color: gray;
+        }
+        
+        .modal-button:hover {
+            background-color: gray;
+            color: white;
+        }
+        
+        .modal-button {
+            border: 2px black;
+            background-color: black;
+            color: white;
+        }
+        
+        .hover-button {
+            font-size: 22px;
+            font-family: mr-eaves-sans, sans-serif;
+        }
+        
+        .footer {
+            width: 100%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            font-size: 0.8em;
+        }
+        
+        #bottom-footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 150px;
+            width: 100%;
+            background-color: black;
+        }
+        
+        #bottom-footer a {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        .footer a {
+            text-decoration: underline;
+            color: white;
+        }
+        
+        #bottom-footer a:hover {
+            text-decoration: underline;
+            color: gray;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+            color: gray;
+        }
+        
+        .projects-header-container {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        
+        .social-icon-box {
+            display: block;
+            margin: auto;
+            margin-bottom: 50px;
+            padding: 0px;
+            position: relative;
+            height: auto;
+            max-width: 200px;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .icon-box {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            margin-bottom: -5px;
+            position: relative;
+            height: auto;
+            max-width: 400px;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .icons-in-box {
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+            width: 50px;
+        }
+        
+        .skill-icon {
+            font-size: 0.75em;
+            margin-top: 1px;
+            margin-bottom: -3px
+        }
+        
+        .hover-box-link a:hover {
+            color: black;
+        }
+        
+        .hover-box-link {
+            color: black;
+        }
+        
+        .dis-none {
+            display: none;
+        }
+        
+        .blog-text {
+            font-size: 22px;
+            line-height: 1.4;
+            color: #343434;
+            max-width: 600px;
+            padding-top: 20px
+        }
+        
+        .blog-div {
+            text-align: left;
+            color: black;
+            max-width: 650px;
+            margin-top: 5%;
+            font-family: 'Open Sans';
+            padding: 10px
+        }
+        
+        .invert-button {
+            background-color: white;
+            border: solid 1px;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            width: 150px;
+            border-radius: 24px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        a.invert-button {
+            color: black;
+            text-decoration: none
+        }
+        
+        .invert-button:hover {
+            background-color: gray;
+            color: white
+        }
