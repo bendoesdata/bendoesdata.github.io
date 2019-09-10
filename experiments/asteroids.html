@@ -336,7 +336,7 @@
             var mouseover = function(d) {
                 tooltip
                     .transition()
-                    .duration(600)
+                    .duration(400)
                 tooltip
                     .style("opacity", 1)
                     .style("display", "inline")
@@ -350,7 +350,7 @@
 
             var mousemove = function(d) {
                 tooltip
-                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='normal-text'>will pass earth on " + (d.close_approach_data[0].close_approach_date) + "</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar distance away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.meters.estimated_diameter_max) + "</span> <br><span class='normal-text'>meters wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
+                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar distance away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.meters.estimated_diameter_max) + "</span> <br><span class='normal-text'>meters wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
                     .style("left", ((d3.mouse(this)[0]) - 50) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
                     .style("top", (h - (h / 2) + 50) + "px")
                     .attr("display", "absolute");
@@ -364,7 +364,7 @@
             var mouseleave = function(d) {
                 tooltip
                     .transition()
-                    .duration(600)
+                    .duration(300)
                     .style("opacity", 0)
                 d3.select(this)
                     .attr('opacity', 0.8);
