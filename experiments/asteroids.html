@@ -131,7 +131,7 @@
         }
         
         .current-date {
-            font-size: 14px;
+            font-size: 18px;
             /* font-weight: 700 */
         }
         
@@ -167,7 +167,7 @@
         }
         
         .normal-text {
-            font-size: 14px;
+            font-size: 12px;
             font-family: 'Space Mono', monospace;
         }
         
@@ -189,20 +189,21 @@
         <button id="myBtn">about</button>
 
         <!-- <img src="images/earth.svg" id="earth" alt="" width=200> -->
-
+        <img src="images/earth-shadow.svg" id="earth" />
         <!-- The Modal -->
         <div id="myModal" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>This page streams live asteroid data every day from the NASA NeoWs (Near Earth Object Web Service). Each circle represents an asteroid in Earth's orbit. It's position in relation to blue sphere on the left is it's distance from Earth.</p>
+                <p>This page streams live asteroid data every day from the NASA NeoWs (Near Earth Object Web Service). Each circle represents an asteroid. Its position in relation to the blue sphere on the left is its current distance from Earth.</p>
                 <p>Distance is measured in lunar distance, a NASA measurement used to quantify space objects. One lunar distance is the distance from Earth to the Moon.</p>
                 <p>Hover over a circle to learn more about each asteroid.</p>
             </div>
 
         </div>
         <div id="my_viz"></div>
+
     </div>
     <footer>
         <div style="margin: auto">
@@ -275,15 +276,15 @@
             // description
             svg.append("text")
                 .attr("x", w - (w / 2))
-                .attr("y", h / 6)
-                .text('explore the asteroids passing earth today:')
+                .attr("y", (h / 5) + 20)
+                .text('explore the asteroids passing earth today')
                 .attr("fill", "white")
                 .attr("class", "viz-description");
 
             // showing current date
             svg.append("text")
                 .attr("x", w - (w / 2))
-                .attr("y", h / 5)
+                .attr("y", (h / 5) - 14)
                 .text('' + display_date)
                 .attr("fill", "white")
                 .attr("class", "current-date");
@@ -291,33 +292,27 @@
             // Earth annotation
             svg.append("text")
                 .attr("x", 10)
-                .attr("y", (h / 2) - 140)
+                .attr("y", (h / 3) - 140)
                 .html('Earth')
                 .attr("fill", "gray")
                 .attr('class', "earth-anno");
 
-            // scaled to size annotation
-            svg.append("text")
-                .attr("x", 10)
-                .attr("y", (h / 2) - 125)
-                .html('(not scaled to size)')
-                .attr("fill", "gray")
-                .attr('class', "small-text");
-
             // add the image of earth
-            svg.append('svg:image')
-                .attr('xlink:href', 'https://bendoesdata.github.io/experiments/images/earth.svg')
-                .attr('x', -405)
-                .attr('y', (h / 2) - 210)
-                .attr("width", 440)
+            svg.append("ellipse")
+                .attr('cx', -92)
+                .attr('cy', (h / 2))
+                .attr("rx", 100)
+                .attr("ry", 950)
+                .attr('fill', '#75c1ff')
+                .attr('opacity', 0.4);
 
             // title annotation
             svg.append("text")
                 .attr("x", 100)
                 .attr("y", h - (h / 3))
-                .text('hover over asteroids for details')
+                .text('hover over an asteroid for details')
                 .attr("fill", "white")
-                .attr('font-size', 12);
+                .attr('font-size', 10);
 
             // Select all circles (and then create them)
             var circles = svg.selectAll("circle")
@@ -350,7 +345,7 @@
 
             var mousemove = function(d) {
                 tooltip
-                    .html("<span class='t-title'>" + (d.name) + "</span><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar distance away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.meters.estimated_diameter_max) + "</span> <br><span class='normal-text'>meters wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
+                    .html("<span class='t-title'>" + (d.name) + "</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].miss_distance.lunar) + "</span> <br><span class='normal-text'>lunar distance away </span><br/><br/><span class='t-number'>" + formatDecimal(d.estimated_diameter.meters.estimated_diameter_max) + "</span> <br><span class='normal-text'>meters wide</span><br><br><span class='t-number'>" + formatDecimal(d.close_approach_data[0].relative_velocity.miles_per_hour) + "</span><br><span class='normal-text'>velocity (mph)</span>")
                     .style("left", ((d3.mouse(this)[0]) - 50) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
                     .style("top", (h - (h / 2) + 50) + "px")
                     .attr("display", "absolute");
@@ -450,4 +445,4 @@
             modal.style.display = "none";
         }
     }
-</script>
+</script>+
