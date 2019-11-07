@@ -5,14 +5,22 @@
 </head>
 
 <body>
-    <h1>Codevember 2019</h1>
+    <div class="header">
+        <h1>Codevember 2019</h1>
+        <h3>
+            One creative sketch with code for every day in November. Most are created in p5.js and many are open sourced (code is on my <a style="font-size: 18px" href="">OpenProcessing</a> profile).
+        </h3>
+        <h3>
+            Each sketch follows the creative prompt for the day. The title below each sketch contains two pieces of information: <b>the prompt</b> followed by <b>my take on the prompt</b>.
+        </h3>
+    </div>
     <div class="row">
         <div class="left">
             <div>
                 <video src="media/output.mp4" alt="" controls=true width=100%>
             </div>
                 <a href="https://www.openprocessing.org/sketch/781831">
-                    Codevember Contrast (01)
+                    CONTRAST CODEVEMBER (01)
                 </a>
         </div>
         <div class="right">
@@ -20,7 +28,7 @@
             <img src="media/animated.gif" alt="fragments" width=100%>
         </div>
             <a href="https://www.openprocessing.org/sketch/781831">
-                Codevember Contrast (01)
+                GEOMETRIC FRAGMENTS (02)
             </a>
         </div>
     </div>
@@ -29,6 +37,9 @@
 
 
 <style>
+    body {
+        background-color: black;
+    }
     .row {
         display: flex;
         max-width: 600px;
@@ -45,9 +56,29 @@
         margin: 20px;
     }
 
+    .header {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    h1 {
+        font-family: monospace;
+        color: white;
+        font-size: 36px;
+    }
+
+    h3 {
+        color: white;
+        font-family: monospace;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
     a {
-        font-size: 16px;
-        color: black;
+        font-family: monospace;
+        font-size: 14px;
+        color: white;
         text-decoration: underline;
     }
 </style>
