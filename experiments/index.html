@@ -17,9 +17,13 @@
             background-color: black
         }
         
+        .container {
+            margin: 20px 20 20 20;
+        }
+        
         .ex-container {
             margin: auto;
-            text-align: left;
+            text-align: center;
             max-width: 500px
         }
         
@@ -33,14 +37,21 @@
         h3 {
             font-family: 'Space Mono', monospace;
             color: white;
-            font-size: 24px
+            font-size: 20px
         }
         
         p {
             font-family: 'Space Mono', monospace;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
             padding: 10;
+        }
+        
+        a {
+            font-family: 'Space Mono', monospace;
+            color: lightblue;
+            font-size: 18px;
+            text-decoration: underline padding: 10;
         }
         
         div .credits {
@@ -59,37 +70,36 @@
             text-decoration: underline
         }
         
-        .link {
-            color: white;
-            font-family: 'Space Mono', monospace;
-            text-decoration: underline
-        }
-        
         .project-title {
-            font-size: 20px
+            font-size: 20px;
+            color: lightskyblue;
         }
     </style>
 </head>
 
 <body>
-    <div class="ex-container">
-        <h1>experiments</h1>
-        <br>
-        <p>a few things i have created recently.</p>
-        <p>working mantra: <br> <strong>done is better than perfect.</strong></p>
-        <br>
-        <hr>
-        <br>
-        <div class="container">
-            <a class="link project-title" href="https://bendoesdata.github.io/experiments/codevember/game-dash/index.html">GAME DASH</a>
-            <p>a little game built for #codevember using p5.js and p5 play.</p>
-        </div>
-        <div class="container">
-            <a class="link project-title" href="https://bendoesdata.github.io/experiments/asteroids.html">NEAR EARTH ASTEROIDS</a>
-            <p>a live visualization of near earth objects passing earth today.</p>
-        </div>
+    <div class="container">
+        <div class="ex-container">
+
+            <h1>experiments</h1>
+            <br>
+            <p>a few things i have created recently.</p>
+            <p>working mantra: <br> <strong>done is better than perfect.</strong></p>
+            <br>
+            <hr>
+            <br>
+            <div class="container">
+                <a class="link project-title" href="https://bendoesdata.github.io/experiments/codevember/game-dash/index.html">GAME DASH</a>
+                <p>a little game built for #codevember using <a href="https://p5js.org/">p5.js</a> and <a href="http://molleindustria.github.io/p5.play/">p5.play</a>.</p>
+            </div>
+            <br>
+            <div class="container">
+                <a class="link project-title" href="https://bendoesdata.github.io/experiments/asteroids.html">NEAR EARTH ASTEROIDS</a>
+                <p>a live visualization of near earth objects passing earth today.</p>
+            </div>
 
 
+        </div>
     </div>
 
     <footer>
