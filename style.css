@@ -13,11 +13,19 @@
                 margin-bottom: 250px;
                 margin-top: -50px
             }
+            p {
+                font-family: 'open sans', sans-serif;
+                font-size: 20px;
+                color: #333333;
+                font-weight: 300;
+                line-height: 1.5
+            }
         }
         /* end break point */
         
         h1 {
             font-family: 'Open Sans', sans-serif;
+            color: whitesmoke;
         }
         
         @media screen and (min-width: 320px) {
@@ -35,23 +43,26 @@
         h2 {
             font-family: 'Open Sans', sans-serif;
             font-size: 42px;
+            color: whitesmoke;
         }
         
         h3 {
             font-family: 'Open Sans', sans-serif;
             font-size: 32px;
+            color: whitesmoke;
         }
         
         h4 {
             font-family: 'Open Sans', sans-serif;
             font-size: 22px;
-            text-align: center
+            text-align: center;
+            color: whitesmoke;
         }
         
         p {
             font-family: 'open sans', sans-serif;
             font-size: 20px;
-            color: #333333;
+            color: whitesmoke;
             font-weight: lighter;
             line-height: 1.5
         }
@@ -99,6 +110,10 @@
             animation-duration: 2.4s;
         }
         
+        .uk-card {
+            background-color: #1E1E1E;
+        }
+        
         .uk-heading-hero {
             font-size: 4em;
             color: black;
@@ -142,6 +157,7 @@
         .content {
             padding-bottom: -10px;
             height: 100%;
+            background-color: #111111;
         }
         
         .uk-navbar-transparent {
@@ -360,7 +376,7 @@
         }
         
         .invert-button {
-            background-color: white;
+            background-color: #1E1E1E;
             border: solid 1px;
             color: black;
             padding: 20px;
@@ -375,11 +391,15 @@
         }
         
         a.invert-button {
-            color: black;
+            color: white;
             text-decoration: none
         }
         
         .invert-button:hover {
             background-color: gray;
-            color: white
+            color: black
+        }
+        
+        #desktop-nav {
+            background: #1E1E1E;
         }
