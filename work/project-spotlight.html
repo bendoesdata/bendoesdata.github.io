@@ -7,16 +7,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" href="uikit-3.0.0-beta.34/css/uikit.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../uikit-3.0.0-beta.34/css/uikit.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
 
-    <script src="uikit-3.0.0-beta.34/js/uikit.min.js"></script>
-    <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
+    <script src="../uikit-3.0.0-beta.34/js/uikit.min.js"></script>
+    <script src="../uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
 
     <style>
         .hero-image-holder {
             max-width: 900px;
+            margin: auto;
         }
         
         .project-one-liner {
@@ -26,16 +27,22 @@
         .project-description {
             padding: 20px;
         }
+        
+        .project-credits {
+            max-width: 900px;
+            padding: 20px;
+            margin: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="content">
         <div class="hero-image-holder">
-            <img src="images/r2f-mockup-01.png" alt="" width="100%">
+            <img src="../images/r2f-devices.png" alt="" width="100%">
         </div>
 
-        <div class="project-credits uk-child-width-expand@s" uk-grid>
+        <div class="project-credits uk-child-width-expand@s project-credits" uk-grid>
             <div>
                 <div class="uk-card-black">
                     <h4><strong>Concept</strong></h4>
@@ -54,6 +61,10 @@
                     <h4>Lisa Zanet</h4>
                 </div>
             </div>
+        </div>
+
+        <div style="padding-top: 10px;margin: 20px;">
+            <hr>
         </div>
 
         <div class="project-one-liner">
@@ -75,9 +86,21 @@
                 </p>
             </div>
             <div>
-                <img src="images/r2f-mockup-02.png" alt="">
+                <img src="../images/r2f-mockup-01.png" alt="">
             </div>
-
+        </div>
+        <div class="project-description uk-child-width-expand@s" uk-grid>
+            <div>
+                <h2>Contribution</h2>
+                <p>
+                    Before starting the design process, I researched and analyzed data on global food waste to find the most impactful facts to feature at the event. These stats were then contextualised alongside other data to help people put the numbers in perspective.
+                    For example: did you know that the amount of global food waste is 4x the amount needed to feed all the malnourished people in the world? I then worked with a team of designers to take these facts and produce a series of visualisations
+                    that weaved together a narrative around food waste.
+                </p>
+            </div>
+            <div>
+                <img src="../images/r2f-mockup-02.png" alt="">
+            </div>
         </div>
     </div>
 </body>
