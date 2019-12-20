@@ -1,5 +1,4 @@
 <!Doctype HTML>
-<html>
 
 <head>
     <title>Portfolio website by Benjamin Cooley</title>
@@ -15,9 +14,9 @@
     <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: black; margin: 0; padding: 0">
 
-    <div class="content">
+    <div class="content" style="width:100%;">
         <!-- navbar -->
         <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 400">
             <nav class="uk-navbar-container uk-navbar-transparent uk-navbar-right" style="background-color: rgb(14,14,14); height: 80px">
@@ -55,22 +54,32 @@
             </nav>
         </div>
 
-        <div class="uk-height-viewport center-div">
-            <div class="uk-heading-hero uk-grid-small" uk-grid style="margin-left: 10%; margin-top: 15%; max-width: 1200px">
-                <div class="" style="">
-                    <h1 style="display: inline; text-align: right;"><span style="color: gray">Ben does  </span></h1>
-                </div>
+        <!-- header hero section -->
+        <div style="width:100%;" class="center-div">
+
+            <div id="desktop-hero" class="uk-heading-hero" uk-grid style="margin-left: 15%; margin-top: 15%; max-width: 1200px">
+                <h1 style="display: inline; text-align: right;"><span style="color: gray">Ben does  </span></h1>
                 <div>
                     <h1 style="display: inline; text-align: left;"><span class="txt-rotate" data-period="1000" data-rotate='[ "data visualization", "creative coding", "UX design", "data analysis", "research", "generative art" ]'></span></h1>
                 </div>
             </div>
+
+            <div id="mobile-hero" class="uk-heading-hero uk-grid-small" style="margin-left: 25%; margin-top: 15%; max-width: 1200px">
+                <div style=" display: block">
+                    <h1 style="display: block; text-align: left;"><span style="color: gray">Ben does  </span></h1>
+                </div>
+                <div>
+                    <h1 style="display: block; text-align: left;"><span class="txt-rotate" data-period="1000" data-rotate='[ "data visualization", "creative coding", "UX design", "data analysis", "research", "generative art" ]'></span></h1>
+                </div>
+            </div>
+
             <div style="margin-right: 5%; margin-top: 200px; text-align: center">
                 <a href="#section-1" class="uk-scroll" style="font-size: 36px; color: white">↓</a>
             </div>
         </div>
 
         <!-- description of work section -->
-        <div class="uk-height-viewport" id="section-1" style="margin-top: 100px">
+        <div class="uk-height-viewport" id="section-1" style="margin-top: 200px">
             <div class="home-text center-div">
                 <h3>My work is grounded in one central goal: making data visual. I lean on a few core disciplines to make this happen, most notably data visualization, creative coding and UX design.</h3>
                 <h3>I also create generative art and other <a href="https://bendoesdata.github.io/experiments" href="_blank">visual experiments</a>. You can find me
@@ -81,37 +90,47 @@
         </div>
 
         <!-- selected work section -->
-        <div id="section-2">
+        <div id="section-2" style="margin-left: auto; margin-right: auto; max-width: 1200px; margin-top: -50px;">
             <div class="home-text">
                 <h1>Selected work</h1>
             </div>
-            <div class="uk-child-width-expand@s" style="padding: 40px" uk-grid>
-                <div class="">
-                    <img style="width: 100%" src="images/reed-sos.gif" />
-                    <a>Reed State of Skills</a>
+            <div class="uk-child-width-expand@s project-grid" style="padding: 40px; " uk-grid>
+                <div class="thumbnail">
+                    <img style="width: 100%" src="images/spotify/s-02.png" />
+                    <a class="thumbnail-caption">Spotify: Conceptual Data Design</a>
                 </div>
                 <div class="">
                     <img style="width: 100%" src="images/reed-sos.gif" />
+                    <a class="thumbnail-caption">Reed: State of Skills</a>
+                </div>
+            </div>
+            <div class="uk-child-width-expand@s" style="padding: 40px" uk-grid>
+                <div class="">
+                    <img style="width: 100%" src="images/r2f-devices.png" />
+                    <a>Root to Flower AR Experience</a>
+                </div>
+                <div class="">
+                    <img style="width: 100%" src="images/cdw/cdw-home.png" />
+                    <a>Clerkenwell Design Week: Data Visualization</a>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <div class="center-div footer" style="height: 160px; width:100%; margin-top: 50px; display: bottom">
-        <hr style="color: black" />
-        <!-- social icons -->
-        <div class="center-div social-icon-box" style="margin-top: 10px">
-            <h4>
+    <!-- footer -->
+    <div class="center-div" style="height: 160px; width:100%; margin-top: 50px; display: bottom; ">
+        <hr style="color: white" />
+
+        <div class="center-div social-icon-box" style="margin-top: 10px;">
+            <h4 style="text-align: center">
                 Connect
             </h4>
-            <a href="https://twitter.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/twitter.svg" /></a>
-            <a href="https://medium.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/medium.svg" /></a>
-            <a href="https://github.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/github.svg" /></a>
+            <a href="https://twitter.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/twitter-light.png" /></a>
+            <a href="https://medium.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/medium-light.png" /></a>
+            <a href="https://bendoesdata.github.io/email.html" target="_blank"><img class="icons-in-box" src="images/icons/email-light.png" /></a>
         </div>
-        <p style="font-size: 1.2em">This site was A Cooley Collaboration</p>
-        <p style="">♡</p>
-        <p style="">Code by Ben<br />Designs and icons by <a style="color: black" href="https://heymagg.com/" target="_blank">Maggie</a></p>
+
     </div>
 
 
@@ -128,9 +147,6 @@
         });
     </script>
 
-    <script>
-    </script>
-
 </body>
 
 <script>
@@ -145,6 +161,20 @@
     if (window.outerWidth > 669) {
         //if window width is more than  to 770px;
         var element = document.getElementById("navbar-collapse-toggle");
+        element.classList.add("dis-none");
+    };
+
+    // if less than 670 switch to Desktop index
+    if (window.innerWidth < 1100) {
+
+        var element = document.getElementById("desktop-hero");
+        element.classList.add("dis-none");
+
+    };
+
+    if (window.innerWidth > 1101) {
+        //if window width is more than 770px;
+        var element = document.getElementById("mobile-hero");
         element.classList.add("dis-none");
     };
 
@@ -208,5 +238,3 @@
         document.body.appendChild(css);
     };
 </script>
-
-</html>

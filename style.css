@@ -169,8 +169,8 @@ body {
 }
 
 .content {
-    padding-bottom: -10px;
     height: 100%;
+    width: 100%;
     background-color: black;
 }
 
@@ -287,6 +287,7 @@ a.button-landing {
     position: relative;
     bottom: 0;
     font-size: 0.8em;
+    background-color: black;
 }
 
 #bottom-footer {
@@ -351,7 +352,8 @@ a.button-landing {
     display: inline-block;
     margin: 0px;
     padding: 0px;
-    width: 50px;
+    width: 45px;
+    padding: 2px
 }
 
 .skill-icon {
@@ -407,6 +409,10 @@ a.button-landing {
 a.invert-button {
     color: white;
     text-decoration: none
+}
+
+.thumbnail-caption {
+    margin-top: 20px
 }
 
 .invert-button:hover {
