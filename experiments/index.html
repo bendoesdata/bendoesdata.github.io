@@ -9,7 +9,6 @@
     <style>
         body {
             margin: 0;
-            position: fixed;
             top: 0;
             right: 0;
             bottom: 0;
@@ -18,7 +17,7 @@
         }
         
         .container {
-            margin: 20px 20 20 20;
+            margin: 20px;
         }
         
         .ex-container {
@@ -54,12 +53,6 @@
             text-decoration: underline padding: 10;
         }
         
-        div .credits {
-            position: absolute;
-            top: 95%;
-            left: 50%
-        }
-        
         .credits {
             color: gray;
             font-size: 10px
@@ -79,12 +72,12 @@
 
 <body>
     <div class="container">
-        <div class="ex-container">
+        <div class="ex-container" style="margin-top: 50px; margin-bottom: 100px">
 
             <h1>experiments</h1>
             <br>
-            <p>a few things i have created recently.</p>
-            <p>working mantra: <br> <strong>done is better than perfect.</strong></p>
+            <p>I often get too caught up in perfection to publish things. this is a place for me to play, create, experiment and learn by doing. <br> <br> working mantra:</p>
+            <p><strong>done is better than perfect.</strong></p>
             <br>
             <hr>
             <br>
@@ -107,11 +100,10 @@
         </div>
     </div>
 
-    <footer>
-        <div style="margin: auto">
-            <p class="credits">built by <a class="footer-link" href="https://bendoesdata.github.io/">bendoesdata</a></p>
-        </div>
-    </footer>
+    <div style="margin-left: 45%; margin-top: 50px; margin-bottom: 50px">
+        <p class="credits">built by <a class="footer-link" style="font-size: 12px;" href="https://bendoesdata.github.io/">bendoesdata</a></p>
+    </div>
+
     <script>
     </script>
 </body>
