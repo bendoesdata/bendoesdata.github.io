@@ -441,7 +441,7 @@ a.invert-button {
 
 .flex-column {
     flex: 33%;
-    max-width: 25%;
+    max-width: 30%;
     padding: 0 4px;
 }
 
@@ -451,13 +451,17 @@ a.invert-button {
     width: 100%;
 }
 
+img.case-study-thumb {
+    border: 1px solid blue;
+}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 
 @media screen and (max-width: 800px) {
     .flex-column {
         flex: 50%;
-        max-width: 50%;
+        max-width: 45%;
     }
 }
 
