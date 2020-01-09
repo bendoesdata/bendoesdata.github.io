@@ -432,6 +432,7 @@ a.invert-button {
 
 .flex-row {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     padding: 0 4px;
 }
@@ -452,7 +453,7 @@ a.invert-button {
 }
 
 img.case-study-thumb {
-    border: 1px solid blue;
+    border-bottom: 6px solid blue;
 }
 
 
