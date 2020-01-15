@@ -180,6 +180,15 @@
             font-size: 12px;
             fill: rgb(177, 235, 250)
         }
+        
+        .no-data-msg {
+            font-size: 24px;
+            background-color: black;
+        }
+        
+        .no-data-box {
+            color: black;
+        }
     </style>
 </head>
 
@@ -212,7 +221,7 @@
     </footer>
     <script>
         // get today's current date and store as var to pass the API
-        var now = new Date();
+        let now = new Date();
         var display_now = new Date();
         var dd = now.getDate();
         var mm = now.getMonth() + 1; //January is 0!
@@ -246,7 +255,6 @@
 
             var dataset = data.near_earth_objects[now]
 
-
             var svg = d3.select("#my_viz").append("svg")
                 .attr("width", w)
                 .attr("height", h);
@@ -256,14 +264,6 @@
                 .attr("width", "100%")
                 .attr("height", "100%")
                 .attr("fill", "black");
-
-            // // draw circle for earth
-            // svg.append("ellipse")
-            //     .attr("cx", -80)
-            //     .attr("cy", h / 2)
-            //     .attr("rx", 90)
-            //     .attr("ry", h)
-            //     .attr("fill", "#0431b7");
 
             // title of viz
             svg.append("text")
@@ -314,11 +314,62 @@
                 .attr("fill", "white")
                 .attr('font-size', 10);
 
-            // Select all circles (and then create them)
-            var circles = svg.selectAll("circle")
-                .data(dataset)
-                .enter()
-                .append("circle");
+            // 5 moons annotation (text + line)
+            svg.append("text")
+                .attr("x", (5 * multiplier) + asteroidPadding)
+                .attr("y", (h - (h / 2) - 30))
+                .text('5 moons away')
+                .attr('text-anchor', 'start')
+                .attr("class", "scale-text");
+            svg.append("line")
+                .attr("x1", (5 * multiplier) + asteroidPadding)
+                .attr("y1", (h - (h / 2) - 20))
+                .attr("x2", (5 * multiplier) + asteroidPadding)
+                .attr("y2", (h - (h / 2) + 20))
+                .attr("stroke-width", 0.5)
+                .attr("stroke", "white");
+
+            // 100 moons annotation (text + line)
+            svg.append("text")
+                .attr("x", (100 * multiplier) + asteroidPadding)
+                .attr("y", (h - (h / 2) - 30))
+                .text('100')
+                .attr('text-anchor', 'start')
+                .attr("class", "scale-text");
+            svg.append("line")
+                .attr("x1", (100 * multiplier) + asteroidPadding)
+                .attr("y1", (h - (h / 2) - 20))
+                .attr("x2", (100 * multiplier) + asteroidPadding)
+                .attr("y2", (h - (h / 2) + 20))
+                .attr("stroke-width", 0.5)
+                .attr("stroke", "white");
+
+            if (dataset == null) {
+                console.log('no data')
+
+                svg.append('rect')
+                    .attr("x", (w / 2) - 200)
+                    .attr("y", (h / 2) - 100)
+                    .attr('width', 500)
+                    .attr('height', 300)
+                    .attr('stroke', 'white')
+                    .attr('strokeWeight', 1)
+                    .attr('fill', 'black');
+
+                svg.append("text")
+                    .attr("x", (w / 2) - 150)
+                    .attr("y", (h / 2) + 20)
+                    .text('no asteroids passing by today')
+                    .attr("fill", "white")
+                    .attr("class", "no-data-msg");
+            } else {
+                // Select all circles (and then create them)
+                var circles = svg.selectAll("circle")
+                    .data(dataset)
+                    .enter()
+                    .append("circle");
+            }
+
 
             // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
             // Its opacity is set to 0: we don't see it by default.
@@ -366,36 +417,6 @@
             }
 
             var multiplier = 6;
-
-            // 5 moons annotation (text + line)
-            svg.append("text")
-                .attr("x", (5 * multiplier) + asteroidPadding)
-                .attr("y", (h - (h / 2) - 30))
-                .text('5 moons away')
-                .attr('text-anchor', 'start')
-                .attr("class", "scale-text");
-            svg.append("line")
-                .attr("x1", (5 * multiplier) + asteroidPadding)
-                .attr("y1", (h - (h / 2) - 20))
-                .attr("x2", (5 * multiplier) + asteroidPadding)
-                .attr("y2", (h - (h / 2) + 20))
-                .attr("stroke-width", 0.5)
-                .attr("stroke", "white");
-
-            // 100 moons annotation (text + line)
-            svg.append("text")
-                .attr("x", (100 * multiplier) + asteroidPadding)
-                .attr("y", (h - (h / 2) - 30))
-                .text('100')
-                .attr('text-anchor', 'start')
-                .attr("class", "scale-text");
-            svg.append("line")
-                .attr("x1", (100 * multiplier) + asteroidPadding)
-                .attr("y1", (h - (h / 2) - 20))
-                .attr("x2", (100 * multiplier) + asteroidPadding)
-                .attr("y2", (h - (h / 2) + 20))
-                .attr("stroke-width", 0.5)
-                .attr("stroke", "white");
 
             // set the location and area of circles
             circles.attr("cx", function(d, i) {
