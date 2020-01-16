@@ -15,7 +15,7 @@
             left: 0;
         }
         /* The Modal (background) */
-        
+
         .modal {
             display: none;
             /* Hidden by default */
@@ -37,7 +37,7 @@
             /* Black w/ opacity */
         }
         /* Modal Content/Box */
-        
+
         .modal-content {
             background-color: #fefefe;
             margin: 15% auto;
@@ -48,21 +48,21 @@
             /* Could be more or less, depending on screen size */
         }
         /* The Close Button */
-        
+
         .close {
             color: #aaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
-        
+
         .close:hover,
         .close:focus {
             color: black;
             text-decoration: none;
             cursor: pointer;
         }
-        
+
         button {
             background-color: gray;
             /* Green */
@@ -78,13 +78,13 @@
             top: 80%;
             font-family: 'Space Mono', monospace;
         }
-        
+
         #earth {
             position: absolute;
             left: -150px;
             top: 50%
         }
-        
+
         .tooltip {
             position: absolute;
             text-align: left;
@@ -100,92 +100,92 @@
             border-width: 0px;
             padding: 10px;
         }
-        
+
         .tooltip {
             color: white
         }
-        
+
         .t-number {
             font-size: 18px;
             font-family: 'Space Mono', monospace;
         }
-        
+
         .t-title {
             font-size: 22px;
             font-family: 'Space Mono', monospace;
             font-weight: 700
         }
-        
+
         .viz_title {
             font-family: 'Space Mono', monospace;
             font-size: 32px
         }
-        
+
         text {
             font-family: 'Space Mono', monospace;
             font-size: 14px
         }
-        
+
         .viz-description {
             font-size: 14px;
         }
-        
+
         .current-date {
             font-size: 18px;
             /* font-weight: 700 */
         }
-        
+
         #my_viz {
             width: 100%;
             height: 100%
         }
-        
+
         p {
             font-family: 'Space Mono', monospace;
         }
-        
+
         div .credits {
             position: absolute;
             top: 95%;
             left: 50%
         }
-        
+
         .credits {
             color: white;
             font-size: 10px
         }
-        
+
         .scale-text {
             font-family: 'Space Mono', monospace;
             fill: gray;
             font-size: 10px
         }
-        
+
         .link {
             color: white;
             text-decoration: underline
         }
-        
+
         .normal-text {
             font-size: 12px;
             font-family: 'Space Mono', monospace;
         }
-        
+
         .small-text {
             font-size: 9px;
             fill: rgb(177, 235, 250)
         }
-        
+
         .earth-anno {
             font-size: 12px;
             fill: rgb(177, 235, 250)
         }
-        
+
         .no-data-msg {
             font-size: 24px;
             background-color: black;
         }
-        
+
         .no-data-box {
             color: black;
         }
@@ -253,7 +253,9 @@
         d3.json('https://api.nasa.gov/neo/rest/v1/feed?api_key=yLeK5umsbkYxahsLWuYq7XoeWgkseD3cZUXBdzVb', function(data) {
             console.log(data.near_earth_objects);
 
-            var dataset = data.near_earth_objects[now]
+            var dataset = data.near_earth_objects[now];
+
+            var multiplier = 6;
 
             var svg = d3.select("#my_viz").append("svg")
                 .attr("width", w)
@@ -415,8 +417,6 @@
                 d3.select(this)
                     .attr('opacity', 0.8);
             }
-
-            var multiplier = 6;
 
             // set the location and area of circles
             circles.attr("cx", function(d, i) {
