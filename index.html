@@ -14,7 +14,7 @@
     <script src="uikit-3.0.0-beta.34/js/uikit-icons.min.js"></script>
 </head>
 
-<body style="background-color: black; margin: 0; padding: 0">
+<body style="margin: 0; padding: 0">
 
     <div class="content" style="width:100%;">
         <!-- navbar -->
@@ -25,9 +25,10 @@
                 </a>
 
                 <!-- desktop navbar -->
-                <div class="uk-navbar-right" id="desktop-nav" style="padding-top: 0px; padding-right: 10px">
+                <div class="uk-navbar-right" id="desktop-nav" style="padding-top: 0px; padding-right: 10px; height: 80px">
                     <ul class="uk-navbar-nav uk-nav-default uk-hidden-small" style="font-family: open-sans; font-size: 20px">
                         <li class="uk-active"><a href="#">HOME</a></li>
+                        <li><a href="#selected-work" class="uk-scroll">WORK</a></li>
                         <li><a href="experiments/index.html">EXPERIMENTS</a></li>
                         <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
                     </ul>
@@ -35,7 +36,7 @@
                 </div>
 
                 <!-- mobile navbar -->
-                <div id="navbar-collapse-toggle" class="uk-navbar-right" style="padding-top: 30px; padding-right: 10px">
+                <div id="navbar-collapse-toggle" class="uk-navbar-right" style="padding-top: 10px; padding-right: 10px">
                     <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#navbar_collapse"></a>
                 </div>
 
@@ -43,6 +44,7 @@
                     <div class="uk-offcanvas-bar">
                         <ul class="uk-nav uk-nav-default" style="font-family: open-sans; font-size: 20px">
                             <li class="uk-active"><a href="#">HOME</a></li>
+                            <li><a href="#selected-work" class="uk-scroll">WORK</a></li>
                             <li><a href="experiments/index.html">EXPERIMENTS</a></li>
                             <li><a href="https://medium.com/@bendoesdata">BLOG</a></li>
                             <li class="uk-nav-divider"></li>
@@ -55,21 +57,21 @@
         </div>
 
         <!-- header hero section -->
-        <div style="width:100%;" class="center-div">
+        <div style="width:100%;" class="center-div" id="header-hero">
 
-            <div id="desktop-hero" class="uk-heading-hero" uk-grid style="margin-left: 15%; margin-top: 15%; max-width: 1200px">
+            <div id="desktop-hero" class="uk-heading-hero" uk-grid style="margin-left: 15%; padding-top: 15%; max-width: 1200px">
                 <h1 style="display: inline; text-align: right;"><span style="color: gray">Ben does  </span></h1>
                 <div>
-                    <h1 style="display: inline; text-align: left;"><span class="txt-rotate" data-period="1000" data-rotate='[ "data visualization", "creative coding", "UX design", "data analysis", "information design", "generative art", "UX engineering" ]'></span></h1>
+                    <h1 style="display: inline; text-align: left; color: white"><span class="txt-rotate" data-period="1000" data-rotate='[ "data visualization", "creative coding", "UX design", "data analysis", "information design", "generative art", "UX engineering" ]'></span></h1>
                 </div>
             </div>
 
-            <div id="mobile-hero" class="uk-heading-hero uk-grid-small" style="margin-left: 25%; margin-top: 15%; max-width: 1200px">
+            <div id="mobile-hero" class="uk-heading-hero uk-grid-small" style="margin-left: 15%; padding-top: 25%; max-width: 800px; margin-top: -10px">
                 <div style=" display: block">
                     <h1 style="display: block; text-align: left;"><span style="color: gray">Ben does  </span></h1>
                 </div>
                 <div>
-                    <h1 style="display: block; text-align: left;"><span class="txt-rotate" data-period="1000" data-rotate='[ "data visualization", "creative coding", "UX design", "data analysis", "information design", "generative art", "UX engineering" ]'></span></h1>
+                    <h1 style="display: block; text-align: left; color: white"><span class="txt-rotate" data-period="1000" data-rotate='[ "data visualization", "creative coding", "UX design", "data analysis", "information design", "generative art", "UX engineering" ]'></span></h1>
                 </div>
             </div>
 
@@ -78,10 +80,14 @@
             </div>
         </div>
 
+        <div id="smooth-gradient">
+
+        </div>
+
         <!-- description of work section -->
-        <div class="" id="section-1" style="margin-top: 200px">
+        <div class="" id="section-1" style="margin-top: 20px">
             <div class="home-text center-div">
-                <h3>I combine design + code to make data more visual. Most of my work leans on a few core skillsets—most notably data visualization, creative coding, and UX design.</h3>
+                <h3>I use design + code to make data more visual. Most of my work leans on a few core skillsets—most notably data visualization, creative coding, and UX design.</h3>
                 <h3>I also enjoy creating generative art and other <a href="https://bendoesdata.github.io/experiments" target="_blank">visual experiments</a>. You can find me
                     <a href="https://twitter.com/bendoesdata" target="_blank">tweeting</a>, writing
                     <a href="https://medium.com/@bendoesdata" target="_blank">data and design related articles</a> and
@@ -91,10 +97,10 @@
             </div>
         </div>
 
-        <div class="work-section" style="margin: auto; margin-top: 150px; width: 100%">
+        <div class="work-section" id="selected-work" style="margin: auto; margin-top: 150px; width: 100%">
             <div class="home-text">
                 <h1>Selected work</h1>
-                <p>A few projects I have worked on, plus some <span style="border-bottom: 3px solid blue;">case studies</span></p>.
+                <p>A few projects I have worked on, plus some <span style="border-bottom: 3px solid rgb(2, 183, 223);">case studies</span></p>.
             </div>
             <div class="grid-holder">
                 <div class="flex-row">
@@ -151,13 +157,13 @@
     <div class="center-div" style="height: 160px; width:100%; margin-top: 50px; display: bottom; ">
         <hr style="color: white" />
 
-        <div class="center-div social-icon-box" style="margin-top: 10px;">
+        <div class="center-div social-icon-box" style="margin-top: 10px; padding: 20px;">
             <h4 style="text-align: center; margin-bottom: 10px">
                 Connect
             </h4>
-            <a href="https://twitter.com/bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/twitter-light.png" /></a>
-            <a href="https://medium.com/@bendoesdata" target="_blank"><img class="icons-in-box" src="images/icons/medium-light.png" /></a>
-            <a href="https://bendoesdata.github.io/email.html" target="_blank"><img class="icons-in-box" src="images/icons/email-light.png" /></a>
+            <a style="padding: 5px" href="https://twitter.com/bendoesdata" target="_blank">twitter</a>
+            <a style="padding: 5px" href="https://medium.com/@bendoesdata" target="_blank">medium</a>
+            <a style="padding: 5px" href="https://bendoesdata.github.io/email.html" target="_blank">email</a>
         </div>
 
     </div>
@@ -166,7 +172,7 @@
     <script>
         UIkit.scroll('.uk-scroll', {
                 duration: 1500,
-                offset: 90
+                offset: 150
             }
 
         );
@@ -281,4 +287,4 @@
     $(".hov-img").each(function() {
         $(this).after('<p class="alt">' + $(this).attr('alt') + '</p>');
     })
-</script>+
+</script>

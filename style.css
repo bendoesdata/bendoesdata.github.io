@@ -29,7 +29,7 @@
 
 h1 {
     font-family: 'Questrial', sans-serif;
-    color: whitesmoke;
+    color: black;
     font-size: 20px;
 }
 
@@ -42,13 +42,13 @@ h1 {
 h2 {
     font-family: 'Questrial', sans-serif;
     font-size: 42px;
-    color: whitesmoke;
+    color: black;
 }
 
 h3 {
     font-family: 'Questrial', sans-serif;
     font-size: 32px;
-    color: whitesmoke;
+    color: black;
     text-align: left;
 }
 
@@ -57,7 +57,7 @@ h4 {
     font-size: 20px;
     text-align: left;
     margin: 0 auto;
-    color: whitesmoke;
+    color: black;
 }
 
 p {
@@ -65,7 +65,7 @@ p {
     font-size: 20px;
     text-align: left;
     margin: auto 0;
-    color: whitesmoke;
+    color: rgb(26, 26, 26);
     font-weight: 100;
     line-height: 1.4
 }
@@ -87,20 +87,26 @@ li {
 }
 
 a {
-    color: whitesmoke;
+    color: black;
     text-decoration: underline;
     font-family: 'Questrial', sans-serif;
 }
 
-html {
+html,
+body {
     min-height: 100%;
-    background-color: black;
+    background: rgb(255, 255, 255);
 }
 
-body {
-    padding-right: -50px;
-    /* bottom = footer height */
-    background-color: black;
+#smooth-gradient {
+    padding-top: 200px;
+    height: 400px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 10%, rgba(0, 0, 0, 1) 100%);
+}
+
+#header-hero {
+    background: black;
+    height: 100vh
 }
 
 .bold {
@@ -121,7 +127,7 @@ body {
 }
 
 .uk-card-black {
-    background-color: black;
+    background-color: white;
     padding-left: 10px;
     padding-right: 10px;
     margin: auto;
@@ -170,7 +176,6 @@ body {
 .content {
     height: 100%;
     width: 100%;
-    background-color: black;
 }
 
 .uk-navbar-transparent {
@@ -462,7 +467,7 @@ a.invert-button {
 }
 
 img.case-study-thumb {
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid rgb(2, 183, 223);
 }
 
 
@@ -515,7 +520,7 @@ img.case-study-thumb {
     padding: 15px;
     font-size: 24px;
     line-height: 22px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     transition: all 300ms ease;
     transition-delay: 200ms;
 }
