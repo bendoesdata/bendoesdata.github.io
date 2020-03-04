@@ -1,0 +1,3 @@
+[submodule "vue-blog-template"]
+	path = vue-blog-template
+	url = https://github.com/bendoesdata/vue-blog-template.git
