@@ -2,7 +2,7 @@
 <html>
    <head>
       <title>HTML Meta Tag</title>
-      <meta http-equiv = "refresh" content = "1; url = https://bendoesdataviz.com/" />
+      <meta http-equiv = "refresh" content = "0.5; url = https://bendoesdataviz.com/" />
    </head>
 
 
@@ -14,7 +14,7 @@
 
 
               <div class="uk-width-expand@m uk-card" style="margin-top: 140px; margin-bottom: 50px">
-                <h1 id="tagline" style="padding: 0px; font-size: 46px">My site has moved! See you there soon.</h1>
+                <h1 id="tagline" style="padding: 0px; font-size: 46px">My site has moved! You will be redirected there soon.</h1>
               </div>
 
         </div>
@@ -23,20 +23,7 @@
 
         </div>
 
-        <!-- description of work section -->
-        <div class="" id="section-1" style="margin-top: 20px">
-            <div class="home-text center-div">
-                <h3>I am a multidisciplinary designer and developer of data visualization products. Most of my work leans on a few core skillsets—most notably data visualization, creative coding, and UX design.</h3>
-                <h3>I also enjoy creating generative art and other <a href="https://bendoesdata.github.io/experiments" target="_blank">visual experiments</a>. You can find me around the web
-                    <a href="https://twitter.com/bendoesdata" target="_blank">tweeting</a>, writing
-                    <a href="https://medium.com/@bendoesdata" target="_blank">data + design related articles</a> and
-                    <a href="https://www.instagram.com/bendabbles/" target="_blank">sharing graphics made with code</a>.
-                </h3>
-
-            </div>
-        </div>
-
-        <div class="work-section" id="selected-work" style="margin: auto; margin-top: 150px; width: 100%">
+<!--         <div class="work-section" id="selected-work" style="margin: auto; margin-top: 150px; width: 100%">
             <div class="home-text">
                 <h1>Selected work</h1>
                 <p>A few projects I have worked on, plus some <span style="border-bottom: 3px solid rgb(2, 183, 223);">case studies</span>.</p>
@@ -60,7 +47,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- selected work section -->
 
@@ -108,112 +95,8 @@
     </div>
 
 
-    <script>
-        UIkit.scroll('.uk-scroll', {
-                duration: 1500,
-                offset: 150
-            }
-
-        );
-
-        UIkit.icon('.uk-icon-link', {
-            ratio: 2
-        });
-    </script>
+    
 
 </body>
     
 </html>
-
-<script>
-    // if less than 670 switch to Desktop index
-    if (window.outerWidth < 669) {
-
-        var element = document.getElementById("desktop-nav");
-        element.classList.add("dis-none");
-
-    };
-
-    if (window.outerWidth > 669) {
-        //if window width is more than  to 770px;
-        var element = document.getElementById("navbar-collapse-toggle");
-        element.classList.add("dis-none");
-    };
-
-    // if less than 670 switch to Desktop index
-
-    // start code for typing carousel
-    const TxtRotate = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 1500;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtRotate.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) {
-            delta /= 2;
-        }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-        }
-
-        setTimeout(function() {
-            that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('txt-rotate');
-        for (var i = 0; i < elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-rotate');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TxtRotate(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-        document.body.appendChild(css);
-    };
-
-
-    // Wrap every .img in a div
-    // 1. For all items with class .img...
-    // 2. Wrap them in a div
-    $(".hov-img").wrap('<div class="alt-wrap"/>');
-
-    // Add alt text after each .img
-    // 1. For all items with class .img...
-    // 2. Run a function for each of them...
-    // 3. To add a p element after it
-    // 5. Containing that element's alt text
-    $(".hov-img").each(function() {
-        $(this).after('<p class="alt">' + $(this).attr('alt') + '</p>');
-    })
-</script>
